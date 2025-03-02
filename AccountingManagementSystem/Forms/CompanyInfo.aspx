@@ -17,14 +17,14 @@
 <body>
     <form id="form1" runat="server">
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
-            <Scripts>
+            <scripts>
                 <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.Core.js">
                 </asp:ScriptReference>
                 <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQuery.js">
                 </asp:ScriptReference>
                 <asp:ScriptReference Assembly="Telerik.Web.UI" Name="Telerik.Web.UI.Common.jQueryInclude.js">
                 </asp:ScriptReference>
-            </Scripts>
+            </scripts>
         </telerik:RadScriptManager>
         <h1>Company Information</h1>
     <div>
@@ -32,8 +32,7 @@
         <table class="auto-style1" style="width: 50%">
             <tr>
                 <td>
-                    <asp:Label ID="Label1" runat="server" Text="Company ID"></asp:Label>
-                </td>
+                    &nbsp;</td>
                 <td>
                     <telerik:RadTextBox ID="txtId" Runat="server" Enabled="False" Width="50px">
                     </telerik:RadTextBox>
@@ -177,7 +176,7 @@
             </tr>
             <tr>
                 <td colspan="4">
-                            <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click">
+                            <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" style="position: relative;">
                             </telerik:RadButton>
                             </td>
                 <td>&nbsp;</td>

@@ -13,34 +13,10 @@ namespace AccountingManagementSystem.Forms
         AccountingManagementSystemEntities db = new AccountingManagementSystemEntities();
         SqlConnection con;
         SqlCommand cmd;
-        public string GetAutoNumber(string fieldName, string tableName, string WhereCondition, string ControlName)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-                string ss = "Select  convert(int,Max(" + fieldName + ")) from " + tableName + " where " + WhereCondition + "=" + ControlName + "";
-                SqlCommand cmd = new SqlCommand(ss, con);
-
-                con.Open();
-                int x = (int)cmd.ExecuteScalar() + 1;
-                return x.ToString();
-            }
-            catch (Exception)
-            {
-                string prefix = "001";
-                return prefix;
-            }
-            finally
-            {
-                con.Close();
-            }
-        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                ReloadMainGrid();
-                EnableControl(false);
                 ClearControl();
 
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
@@ -53,7 +29,7 @@ namespace AccountingManagementSystem.Forms
                 {
                     txtId.Text = Dr["ComId"].ToString();
                     Session["Name"] = Dr["Name"].ToString();
-                    txtName.Text =  Dr["Name"].ToString();
+                    txtName.Text = Dr["Name"].ToString();
                     Session["Address"] = Dr["Address"].ToString();
                     txtAddress.Text = Dr["Address"].ToString();
                     Session["Contact1"] = Dr["Contact1"].ToString();
@@ -62,8 +38,6 @@ namespace AccountingManagementSystem.Forms
                     txtContactNo2.Text = Dr["Contact2"].ToString();
                     Session["Fax"] = Dr["Fax"].ToString();
                     txtFax.Text = Dr["Fax"].ToString();
-                    //Session["CompanyLogo"] = Dr["CompanyLogo"].ToString();
-                    //Image1.ImageUrl= Dr["CompanyLogo"].ToString();
                     Session["CompanyMoto"] = Dr["CompanyMoto"].ToString();
                     txtMoto.Text = Dr["CompanyMoto"].ToString();
                     Session["Email"] = Dr["Email"].ToString();
@@ -87,37 +61,15 @@ namespace AccountingManagementSystem.Forms
                 con.Close();
             }
         }
-
-        public void EnableControl(bool ec)
-        {
-            
-        }
         public void ClearControl()
         {
-           
             Image1.ImageUrl = null;
-        }
-
-        private void ReloadMainGrid()
-        {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-            con.Open();
-            cmd = new SqlCommand("Sp_ItemInfo", con);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "5";
-            SqlDataAdapter adpt = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
-            adpt.Fill(ds);
-            dt = ds.Tables[0];
-            //rgMain.DataSource = dt;
-            //rgMain.DataBind();
         }
         private void SaveData()
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             con.Open();
-            try   
+            try
             {
                 cmd = new SqlCommand("Sp_CompanyInfo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -151,62 +103,6 @@ namespace AccountingManagementSystem.Forms
             {
                 lblMessage.Text = ex.Message.ToString();
             }
-
-            //Response.Redirect("~/Home.aspx");
-        }
-        private void DataRefillForGrid()
-        {
-            //GridDataItem selectedItem = (GridDataItem)rgMain.SelectedItems[0];
-            //ViewState["ItemCode"] = selectedItem["ItemCode"].Text;
-            //ViewState["rowid"] = selectedItem["rowid"].Text;
-
-            //con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-            //con.Open();
-            //cmd = new SqlCommand("Sp_ItemInfo", con);
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 6;
-            //cmd.Parameters.Add("@ItemCode", SqlDbType.VarChar).Value = selectedItem["ItemCode"].Text;
-            //SqlDataAdapter adpt = new SqlDataAdapter(cmd);
-            //DataSet ds = new DataSet();
-            //DataTable dt1 = new DataTable();
-            //adpt.Fill(ds);
-            //dt1 = ds.Tables[0];
-
-            //txtItemCode.Text = dt1.Rows[0]["ItemCode"].ToString();
-            //txtItemName.Text = dt1.Rows[0]["ItemName"].ToString();
-            //txtItemSize.Text = dt1.Rows[0]["ItemSize"].ToString();
-            //txtPurchaseRate.Text = dt1.Rows[0]["PurRate"].ToString();
-            //txtSalesRate.Text = dt1.Rows[0]["SalesRate"].ToString();
-            //txtUsedFor.Text = dt1.Rows[0]["UsedFor"].ToString();
-            //cmCategory.SelectedValue = dt1.Rows[0]["ItemCatId"].ToString();
-            //cmItemUnit.SelectedValue = dt1.Rows[0]["ItemUnit"].ToString();
-            //txtMinQty.Text = dt1.Rows[0]["MinQty"].ToString();
-            //txtMaxQty.Text = dt1.Rows[0]["MaxQty"].ToString();
-            //txtUsedFor.Text = dt1.Rows[0]["UsedFor"].ToString();
-            //txtNotes.Text = dt1.Rows[0]["Notes"].ToString();
-            //if (dt1.Rows[0]["Photo"].ToString() != "" || dt1.Rows[0]["Photo"] != null)
-            //{
-            //    byte[] bytes = (byte[])dt1.Rows[0]["Photo"];
-            //    ViewState["Photo"] = (byte[])dt1.Rows[0]["Photo"];
-            //    if (bytes.Length > 0)
-            //    {
-            //        string base64String = Convert.ToBase64String(bytes, 0, bytes.Length);
-            //        Image1.ImageUrl = "data:image/png;base64," + Convert.ToBase64String(MakeThumbnail(bytes, 100, 100), 0, (MakeThumbnail(bytes, 100, 100).Length));
-            //        Image1.DataBind();
-            //    }
-            //}
-        }
-        public static byte[] GetPhoto(string imageloc)
-        {
-
-            FileStream stream = new FileStream(imageloc, FileMode.Open, FileAccess.Read);
-            BinaryReader reader = new BinaryReader(stream);
-            byte[] photo = reader.ReadBytes((int)stream.Length);
-
-            reader.Close();
-            stream.Close();
-
-            return photo;
         }
         public static byte[] MakeThumbnail(byte[] myImage, int thumbWidth, int thumbHeight)
         {
@@ -217,44 +113,12 @@ namespace AccountingManagementSystem.Forms
                 return ms.ToArray();
             }
         }
-        protected void btnNew_Click(object sender, EventArgs e)
-        {
-          
-        }
         protected void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
                 SaveData();
-                ReloadMainGrid();
                 ClearControl();
-                ReloadMainGrid();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-           
-        }
-        protected void btnEdit_Click(object sender, EventArgs e)
-        {
-            EnableControl(true);
-        }
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-            ClearControl();
-            EnableControl(false);
-        }
-        protected void rgMain_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                ClearControl();
-                DataRefillForGrid();
-                EnableControl(true);
             }
             catch (Exception ex)
             {
