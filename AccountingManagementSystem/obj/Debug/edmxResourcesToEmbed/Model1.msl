@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PEMSModelStoreContainer" CdmEntityContainer="AccountingManagementSystemEntities">
+    <EntitySetMapping Name="tblCategories">
+      <EntityTypeMapping TypeName="PEMSModel.tblCategory">
+        <MappingFragment StoreEntitySet="tblCategory">
+          <ScalarProperty Name="CatId" ColumnName="CatId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCompanies">
+      <EntityTypeMapping TypeName="PEMSModel.tblCompany">
+        <MappingFragment StoreEntitySet="tblCompany">
+          <ScalarProperty Name="ComId" ColumnName="ComId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact1" ColumnName="Contact1" />
+          <ScalarProperty Name="Contact2" ColumnName="Contact2" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Website" ColumnName="Website" />
+          <ScalarProperty Name="CompanyMoto" ColumnName="CompanyMoto" />
+          <ScalarProperty Name="CompanyLogo" ColumnName="CompanyLogo" />
+          <ScalarProperty Name="st_dt" ColumnName="st_dt" />
+          <ScalarProperty Name="ed_dt" ColumnName="ed_dt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCostCenters">
+      <EntityTypeMapping TypeName="PEMSModel.tblCostCenter">
+        <MappingFragment StoreEntitySet="tblCostCenters">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCostElements">
+      <EntityTypeMapping TypeName="PEMSModel.tblCostElement">
+        <MappingFragment StoreEntitySet="tblCostElements">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CostCenterId" ColumnName="CostCenterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCustomers">
+      <EntityTypeMapping TypeName="PEMSModel.tblCustomer">
+        <MappingFragment StoreEntitySet="tblCustomers">
+          <ScalarProperty Name="CustomerTerritoryCode" ColumnName="CustomerTerritoryCode" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="OccupId" ColumnName="OccupId" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="DistId" ColumnName="DistId" />
+          <ScalarProperty Name="ThanaId" ColumnName="ThanaId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="ViId" ColumnName="ViId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="IsSupplier" ColumnName="IsSupplier" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+          <ScalarProperty Name="DeliveryAddress" ColumnName="DeliveryAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDepartments">
+      <EntityTypeMapping TypeName="PEMSModel.tblDepartment">
+        <MappingFragment StoreEntitySet="tblDepartments">
+          <ScalarProperty Name="DeptId" ColumnName="DeptId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDesignations">
+      <EntityTypeMapping TypeName="PEMSModel.tblDesignation">
+        <MappingFragment StoreEntitySet="tblDesignations">
+          <ScalarProperty Name="DesigId" ColumnName="DesigId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDistricts">
+      <EntityTypeMapping TypeName="PEMSModel.tblDistrict">
+        <MappingFragment StoreEntitySet="tblDistricts">
+          <ScalarProperty Name="DistId" ColumnName="DistId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEmails">
+      <EntityTypeMapping TypeName="PEMSModel.tblEmail">
+        <MappingFragment StoreEntitySet="tblEmail">
+          <ScalarProperty Name="MODULEID" ColumnName="MODULEID" />
+          <ScalarProperty Name="UIID" ColumnName="UIID" />
+          <ScalarProperty Name="RPTCATEGORY" ColumnName="RPTCATEGORY" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="FROMEMAILID" ColumnName="FROMEMAILID" />
+          <ScalarProperty Name="SUBJECT" ColumnName="SUBJECT" />
+          <ScalarProperty Name="BODY" ColumnName="BODY" />
+          <ScalarProperty Name="LMBY" ColumnName="LMBY" />
+          <ScalarProperty Name="LMDT" ColumnName="LMDT" />
+          <ScalarProperty Name="IPADDRESS" ColumnName="IPADDRESS" />
+          <ScalarProperty Name="MACHINEID" ColumnName="MACHINEID" />
+          <ScalarProperty Name="FILEPATH" ColumnName="FILEPATH" />
+          <ScalarProperty Name="EMAILPWD" ColumnName="EMAILPWD" />
+          <ScalarProperty Name="SMTPHOST" ColumnName="SMTPHOST" />
+          <ScalarProperty Name="PORT" ColumnName="PORT" />
+          <ScalarProperty Name="SSLSTATUS" ColumnName="SSLSTATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblExpenses">
+      <EntityTypeMapping TypeName="PEMSModel.tblExpense">
+        <MappingFragment StoreEntitySet="tblExpense">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CostHead" ColumnName="CostHead" />
+          <ScalarProperty Name="CostElement" ColumnName="CostElement" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="HandedTo" ColumnName="HandedTo" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblItems">
+      <EntityTypeMapping TypeName="PEMSModel.tblItem">
+        <MappingFragment StoreEntitySet="tblItems">
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="SrlCode" ColumnName="SrlCode" />
+          <ScalarProperty Name="ItemAlias" ColumnName="ItemAlias" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemCatId" ColumnName="ItemCatId" />
+          <ScalarProperty Name="SupId" ColumnName="SupId" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="ItemSize" ColumnName="ItemSize" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ItemUnit" ColumnName="ItemUnit" />
+          <ScalarProperty Name="PurRate" ColumnName="PurRate" />
+          <ScalarProperty Name="SalesRate" ColumnName="SalesRate" />
+          <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+          <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+          <ScalarProperty Name="MenufDate" ColumnName="MenufDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="Pack" ColumnName="Pack" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="UsedFor" ColumnName="UsedFor" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblItemSizes">
+      <EntityTypeMapping TypeName="PEMSModel.tblItemSize">
+        <MappingFragment StoreEntitySet="tblItemSize">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLogIns">
+      <EntityTypeMapping TypeName="PEMSModel.tblLogIn">
+        <MappingFragment StoreEntitySet="tblLogIn">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMoneyReceiveds">
+      <EntityTypeMapping TypeName="PEMSModel.tblMoneyReceived">
+        <MappingFragment StoreEntitySet="tblMoneyReceived">
+          <ScalarProperty Name="CustCode" ColumnName="CustCode" />
+          <ScalarProperty Name="SalesId" ColumnName="SalesId" />
+          <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+          <ScalarProperty Name="ReceiveAmount" ColumnName="ReceiveAmount" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="ChequeDt" ColumnName="ChequeDt" />
+          <ScalarProperty Name="IssueBank" ColumnName="IssueBank" />
+          <ScalarProperty Name="DepositBank" ColumnName="DepositBank" />
+          <ScalarProperty Name="ChequeDetails" ColumnName="ChequeDetails" />
+          <ScalarProperty Name="Particulars" ColumnName="Particulars" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="lmdt" ColumnName="lmdt" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="track_id" ColumnName="track_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPackings">
+      <EntityTypeMapping TypeName="PEMSModel.tblPacking">
+        <MappingFragment StoreEntitySet="tblPacking">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPayments">
+      <EntityTypeMapping TypeName="PEMSModel.tblPayment">
+        <MappingFragment StoreEntitySet="tblPayment">
+          <ScalarProperty Name="TrackId" ColumnName="TrackId" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="PayAmount" ColumnName="PayAmount" />
+          <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+          <ScalarProperty Name="DueAmount" ColumnName="DueAmount" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="ChequeDate" ColumnName="ChequeDate" />
+          <ScalarProperty Name="IssueBank" ColumnName="IssueBank" />
+          <ScalarProperty Name="DepositBank" ColumnName="DepositBank" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="ChequeDetails" ColumnName="ChequeDetails" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+          <ScalarProperty Name="PurID" ColumnName="PurID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPosts">
+      <EntityTypeMapping TypeName="PEMSModel.tblPost">
+        <MappingFragment StoreEntitySet="tblPosts">
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ThanaId" ColumnName="ThanaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPurchaseDTLs">
+      <EntityTypeMapping TypeName="PEMSModel.tblPurchaseDTL">
+        <MappingFragment StoreEntitySet="tblPurchaseDTL">
+          <ScalarProperty Name="PurId" ColumnName="PurId" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+          <ScalarProperty Name="MafDate" ColumnName="MafDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPurchaseHDRs">
+      <EntityTypeMapping TypeName="PEMSModel.tblPurchaseHDR">
+        <MappingFragment StoreEntitySet="tblPurchaseHDR">
+          <ScalarProperty Name="PurId" ColumnName="PurId" />
+          <ScalarProperty Name="PurDate" ColumnName="PurDate" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="TaxVAT" ColumnName="TaxVAT" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="OtherCost" ColumnName="OtherCost" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="LabourCost" ColumnName="LabourCost" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Due" ColumnName="Due" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="ChequeDt" ColumnName="ChequeDt" />
+          <ScalarProperty Name="DepositBank" ColumnName="DepositBank" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="ChequeDetails" ColumnName="ChequeDetails" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRecipients">
+      <EntityTypeMapping TypeName="PEMSModel.tblRecipient">
+        <MappingFragment StoreEntitySet="tblRecipient">
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="selected" ColumnName="selected" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSalesDTLs">
+      <EntityTypeMapping TypeName="PEMSModel.tblSalesDTL">
+        <MappingFragment StoreEntitySet="tblSalesDTL">
+          <ScalarProperty Name="SalesId" ColumnName="SalesId" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="MafDate" ColumnName="MafDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSalesHDRs">
+      <EntityTypeMapping TypeName="PEMSModel.tblSalesHDR">
+        <MappingFragment StoreEntitySet="tblSalesHDR">
+          <ScalarProperty Name="SalesId" ColumnName="SalesId" />
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+          <ScalarProperty Name="ChallanNo" ColumnName="ChallanNo" />
+          <ScalarProperty Name="AmendmentDate" ColumnName="AmendmentDate" />
+          <ScalarProperty Name="BillNo" ColumnName="BillNo" />
+          <ScalarProperty Name="PONo" ColumnName="PONo" />
+          <ScalarProperty Name="PODate" ColumnName="PODate" />
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="VoucherNo" ColumnName="VoucherNo" />
+          <ScalarProperty Name="CustId" ColumnName="CustId" />
+          <ScalarProperty Name="ShipTo" ColumnName="ShipTo" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="TaxVAT" ColumnName="TaxVAT" />
+          <ScalarProperty Name="VAT" ColumnName="VAT" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="LabourCost" ColumnName="LabourCost" />
+          <ScalarProperty Name="OtherCost" ColumnName="OtherCost" />
+          <ScalarProperty Name="NetAmount" ColumnName="NetAmount" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Due" ColumnName="Due" />
+          <ScalarProperty Name="PayMode" ColumnName="PayMode" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+          <ScalarProperty Name="ChequeDt" ColumnName="ChequeDt" />
+          <ScalarProperty Name="DepositBank" ColumnName="DepositBank" />
+          <ScalarProperty Name="BankName" ColumnName="BankName" />
+          <ScalarProperty Name="ChequeDetails" ColumnName="ChequeDetails" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSalesReturns">
+      <EntityTypeMapping TypeName="PEMSModel.tblSalesReturn">
+        <MappingFragment StoreEntitySet="tblSalesReturn">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="CustCode" ColumnName="CustCode" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="dt" ColumnName="dt" />
+          <ScalarProperty Name="TrackId" ColumnName="TrackId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSuppliers">
+      <EntityTypeMapping TypeName="PEMSModel.tblSupplier">
+        <MappingFragment StoreEntitySet="tblSuppliers">
+          <ScalarProperty Name="SupplierId" ColumnName="SupplierId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Religion" ColumnName="Religion" />
+          <ScalarProperty Name="OccupId" ColumnName="OccupId" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="DistId" ColumnName="DistId" />
+          <ScalarProperty Name="ThanaId" ColumnName="ThanaId" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="ViId" ColumnName="ViId" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="IsSupplier" ColumnName="IsSupplier" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblThanas">
+      <EntityTypeMapping TypeName="PEMSModel.tblThana">
+        <MappingFragment StoreEntitySet="tblThanas">
+          <ScalarProperty Name="ThanaId" ColumnName="ThanaId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DistId" ColumnName="DistId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUsers">
+      <EntityTypeMapping TypeName="PEMSModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUsers">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ConPassword" ColumnName="ConPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVillages">
+      <EntityTypeMapping TypeName="PEMSModel.tblVillage">
+        <MappingFragment StoreEntitySet="tblVillages">
+          <ScalarProperty Name="ViId" ColumnName="ViId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblWeights">
+      <EntityTypeMapping TypeName="PEMSModel.tblWeight">
+        <MappingFragment StoreEntitySet="tblWeights">
+          <ScalarProperty Name="WgtId" ColumnName="WgtId" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblStocks">
+      <EntityTypeMapping TypeName="PEMSModel.tblStock">
+        <MappingFragment StoreEntitySet="tblStocks">
+          <ScalarProperty Name="LotNumber" ColumnName="LotNumber" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="ItemSize" ColumnName="ItemSize" />
+          <ScalarProperty Name="StockQty" ColumnName="StockQty" />
+          <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+          <ScalarProperty Name="MaxQty" ColumnName="MaxQty" />
+          <ScalarProperty Name="Lmdt" ColumnName="Lmdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSettings">
+      <EntityTypeMapping TypeName="PEMSModel.tblSetting">
+        <MappingFragment StoreEntitySet="tblSetting">
+          <ScalarProperty Name="IsHeaderMoto" ColumnName="IsHeaderMoto" />
+          <ScalarProperty Name="IsFooterMoto" ColumnName="IsFooterMoto" />
+          <ScalarProperty Name="IsSalesDiscount" ColumnName="IsSalesDiscount" />
+          <ScalarProperty Name="IsInvoiceHeaderVisible" ColumnName="IsInvoiceHeaderVisible" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

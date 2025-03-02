@@ -1,0 +1,395 @@
+﻿==========================================Shifting Query(30.06.13)=============================================
+
+SELECT  tblAtData_1.card_no,
+
+
+CONVERT (varchar, CONVERT (datetime, @date), 103) as Indate,
+
+convert(varchar(10), 
+                      dateadd(day, 1, convert(date, @date,103)), 103) as OutDate,
+ 
+
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date)) AS EntryTime,
+
+
+Case When (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1))>='08:00:00' Then '08:00:00' End AS OutTime,
+
+
+24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))) as WorkingHour
+
+
+From tblAtData as tblAtData_1  INNER JOIN tblSettings ON tblSettings.StName='SettingNight'
+
+WHERE ( tblAtData_1.d_card = @date) and (SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))>= tblSettings.StEntryTime
+
+GROUP BY  tblAtData_1.card_no
+
+==========================================(Attendence Shifting(30.06.13))=============================================
+SELECT  tblAtData_1.card_no,
+
+
+CONVERT (varchar, CONVERT (datetime, @date), 103) as Indate,
+
+convert(varchar(10), 
+                      dateadd(day, 1, convert(date, @date,103)), 103) as OutDate,
+ 
+
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date)) AS EntryTime,
+
+
+Case When (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1))>='08:00:00' Then '08:00:00' End AS OutTime,
+
+
+Case When (24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))>=  tblSettings.StWH then tblSettings.StWH  When
+
+ (24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))<=tblSettings.StWH then 
+
+(24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date)))) 
+
+end
+
+
+
+
+ as WorkingHour,
+
+
+Case When ((24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))-tblSettings.StWH)>=tblSettings.StOTH then tblSettings.StOTH 
+
+When 
+
+((24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))-tblSettings.StWH)<tblSettings.StOTH then
+
+
+
+((24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))-tblSettings.StWH)
+
+
+
+
+
+end AS OTH
+
+
+
+From tblAtData as tblAtData_1  INNER JOIN tblSettings ON tblSettings.StName='SettingNight'
+
+WHERE ( tblAtData_1.d_card = @date) and (SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))>= tblSettings.StEntryTime
+
+GROUP BY  tblAtData_1.card_no, tblSettings.StWH,tblSettings.StOTH
+
+==========================================()=============================================
+
+SELECT  tblAtData_1.card_no,
+
+
+CONVERT (varchar, CONVERT (datetime, @date), 103) as Indate,
+
+convert(varchar(10), 
+                      dateadd(day, 1, convert(date, @date,103)), 103) as OutDate,
+ 
+
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date)) AS EntryTime,
+
+
+Case When (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1))>='08:00:00' Then '08:00:00' End AS OutTime,
+
+
+Case When (24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))>=  tblSettings.StWH then tblSettings.StWH  When
+
+ (24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))<=tblSettings.StWH then 
+
+(24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date)))) 
+
+
+
+end as WorkingHour,
+
+
+
+Case When ((24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))-tblSettings.StWH)>=tblSettings.StOTH then tblSettings.StOTH 
+
+
+When
+
+((24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))-tblSettings.StWH)<0 then '0'
+
+
+When 
+
+((24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))-tblSettings.StWH)<tblSettings.StOTH 
+
+then
+
+
+
+((24-DATEDIFF (hour, (SELECT CAST(LEFT(Max(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(Max(tblAtData.t_card),
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date+1)), 
+(SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))))-tblSettings.StWH)
+
+
+end AS OTH
+
+
+
+From tblAtData as tblAtData_1  INNER JOIN tblSettings ON tblSettings.StName='SettingNight'
+
+WHERE ( tblAtData_1.d_card = @date) and (SELECT CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 
+                         6), 2) AS TIME) FROM tblAtData 
+
+WHERE (tblAtData_1.card_no=tblAtData.card_no) AND ( tblAtData.d_card = @date))>= tblSettings.StEntryTime
+
+GROUP BY  tblAtData_1.card_no, tblSettings.StWH,tblSettings.StOTH
+
+==============================================(For Image Help)==============================================
+protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            DirectoryInfo di = new DirectoryInfo(Server.MapPath("~/images"));
+            int i = 0;
+            foreach (FileInfo fi in di.GetFiles())
+            {
+                HtmlInputImage ib = new HtmlInputImage();
+                ib.ID = "ImageButton" + i;
+                i++;
+                ib.Src = "../images/" + fi.Name;
+                ib.Attributes.Add("onclick", "javascript:window.open('" + "../images/" + fi.Name + "');return false;");
+                PlaceHolder1.Controls.Add(ib);
+                Literal lit1 = new Literal();
+                lit1.Text = "<br/>";
+                PlaceHolder1.Controls.Add(lit1);
+
+
+            }
+        }
+    }
+
+
+	protected string FolderVirtualPath;
+        private void ShowImages()
+        {
+            string UserName = Request.QueryString["UserName"];
+            //UserName = "FileIcons";
+            FolderVirtualPath = "~/Images/" + UserName; // you have to change "Images" folder, if user folders are stored other than root
+            string ImageFolderPath = Server.MapPath(FolderVirtualPath);
+
+
+            DirectoryInfo ImageFolderInfo = new DirectoryInfo(ImageFolderPath);
+
+
+            Repeater1.DataSource = ImageFolderInfo.GetFiles();
+            Repeater1.DataBind();
+        }
+==============================================(For Attendance Query Help)==============================================
+SELECT   tblEmployeeInfo.EmpCode, tblEmployeeInfo.EmpName, tblEmployeeInfo.EmpDepart, tblEmployeeInfo.EmpDesig, tblAtData.card_no, 
+
+CONVERT(varchar, CONVERT(datetime, tblAtData.d_card), 103) AS Date, 
+
+CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2)+ ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 6), 2) AS TIME) AS Entrytime,
+
+CASE WHEN 
+
+(CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME)) > tblSettings.StShiftEndTime 
+THEN 
+(CAST(LEFT((tblSettings.StTimeRound), 2)+ ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME)) 
+WHEN 
+
+(CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME)) <= tblSettings.StShiftEndTime 
+
+THEN 
+
+(CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME)) END AS OutTime, 
+
+
+CASE WHEN 
+
+DATEDIFF(hour, tblSettings.StShiftStartTime, CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) AS TIME)) <= tblSettings.StWH 
+
+THEN 
+
+DATEDIFF(hour, tblSettings.StShiftStartTime, CAST(LEFT(MAX(tblAtData.t_card), 2)+ ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) AS TIME)) 
+
+WHEN 
+
+DATEDIFF(hour, tblSettings.StShiftStartTime, CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) AS TIME)) >= tblSettings.StWH 
+
+THEN tblSettings.StWH END AS WH, 
+
+
+CASE WHEN 
+
+(CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME)) > tblSettings.StShiftEndTime 
+
+THEN tblSettings.StOTH 
+
+WHEN 
+(CAST(LEFT(MAX(tblAtData.t_card), 2)+ ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME)) < tblSettings.StOutTime THEN 0 
+
+WHEN 
+(CAST(LEFT(MAX(tblAtData.t_card), 2)+ ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME)) <= tblSettings.StShiftEndTime 
+
+THEN 
+DATEDIFF(MINUTE, tblSettings.StOutTime, CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) AS TIME)) / 60 + 1 END AS OT, 
+       
+                  
+CASE WHEN 
+
+CONVERT(datetime, (CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 6), 2) AS TIME))) > CONVERT(datetime, tblSettings.StEntryTime, 8) 
+
+THEN 'Late' END AS ComingSate
+
+FROM            tblEmployeeInfo INNER JOIN tblAtData ON tblEmployeeInfo.EmpCardID = tblAtData.card_no INNER JOIN tblSettings ON tblSettings.StName =
+
+
+(SELECT        TOP (1) CASE WHEN  tblAtdata.d_card   >=  tblSettings.StStartDate  and tblAtdata.d_card <= tblSettings.StEndDate THEN
+                                                             (SELECT        StName
+                                                               FROM            tblSettings
+                                                               WHERE        StName = 'Ramdan') 
+                                                  ELSE
+                                                             (SELECT        StName
+                                                               FROM            tblSettings
+                                                               WHERE        StName = 'Setting')
+END AS StName
+                               FROM            tblSettings CROSS JOIN
+                                                         tblAtData)
+
+
+WHERE        (tblAtData.d_card BETWEEN @sd AND @ed)
+
+GROUP BY tblEmployeeInfo.EmpCode, tblEmployeeInfo.EmpName, tblEmployeeInfo.EmpDepart, tblEmployeeInfo.EmpDesig, tblAtData.card_no, tblAtData.d_card, 
+                         tblSettings.StShiftEndTime, tblSettings.StEntryTime, tblSettings.StOTH, tblSettings.StWH, tblSettings.StOutTime, tblSettings.StShiftStartTime, 
+                         tblSettings.StTimeRound,tblSettings.StEndDate,tblSettings.StStartDate 
+
+HAVING        (CAST(LEFT(MIN(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MIN(tblAtData.t_card), 6), 2) AS TIME) 
+                         <> CAST(LEFT(MAX(tblAtData.t_card), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 4), 2) + ':' + RIGHT(LEFT(MAX(tblAtData.t_card), 6), 2) AS TIME))
+ORDER BY tblAtData.d_card
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+==============================================(For Image Help)==============================================
+

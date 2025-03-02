@@ -1,0 +1,22 @@
+USE [EcoSalesMS]
+GO
+
+/****** Object:  Table [dbo].[tblLogIn]    Script Date: 7/30/2021 12:35:02 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblLogIn](
+	[Id] [int] NOT NULL,
+	[UserName] [varchar](100) NULL,
+	[Password] [varchar](50) NULL,
+ CONSTRAINT [PK_tblLogIn] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

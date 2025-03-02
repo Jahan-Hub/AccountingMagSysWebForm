@@ -1,0 +1,65 @@
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\SalesMS\obj\Debug\AccountingManagementSystem.csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\SalesMS\obj\Debug\AccountingManagementSystem.dll.licenses
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\SalesMS\obj\Debug\AccountingManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\AccountingManagementSystem.dll.config
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\AccountingManagementSystem.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\AccountingManagementSystem.pdb
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.CrystalReports.Design.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.Data.AdoDotNetInterop.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportSource.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.Shared.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.Web.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\EntityFramework.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\EnvDTE.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\stdole.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\bin\EntityFramework.xml
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.AssemblyReference.cache
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll.licenses
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CopyComplete
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll
+C:\Users\HP\OneDrive\Desktop\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.pdb
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\AccountingManagementSystem.dll.config
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\AccountingManagementSystem.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\AccountingManagementSystem.pdb
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.CrystalReports.Design.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.Data.AdoDotNetInterop.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportSource.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.Shared.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.Web.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\EntityFramework.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\EnvDTE.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\stdole.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\bin\EntityFramework.xml
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.AssemblyReference.cache
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll.licenses
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CoreCompileInputs.cache
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CopyComplete
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.pdb

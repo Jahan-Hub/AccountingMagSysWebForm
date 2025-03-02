@@ -1,0 +1,147 @@
+D:\Project For Life Time\SalesMS\SalesMS\bin\SalesMS.dll.config
+D:\Project For Life Time\SalesMS\SalesMS\bin\SalesMS.dll
+D:\Project For Life Time\SalesMS\SalesMS\bin\SalesMS.pdb
+D:\Project For Life Time\SalesMS\SalesMS\bin\EntityFramework.dll
+D:\Project For Life Time\SalesMS\SalesMS\bin\Telerik.Web.UI.dll
+D:\Project For Life Time\SalesMS\SalesMS\bin\Telerik.Web.UI.Skins.dll
+D:\Project For Life Time\SalesMS\SalesMS\bin\EntityFramework.xml
+D:\Project For Life Time\SalesMS\SalesMS\bin\Telerik.Web.UI.xml
+D:\Project For Life Time\SalesMS\SalesMS\obj\Release\SalesMS.dll
+D:\Project For Life Time\SalesMS\SalesMS\obj\Release\SalesMS.pdb
+D:\Project For Life Time\SalesMS\SalesMS\obj\Release\SalesMS.csprojResolveAssemblyReference.cache
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\SalesMS.dll.config
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\SalesMS.dll
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\SalesMS.pdb
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\EntityFramework.dll
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\Telerik.Web.UI.dll
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\Telerik.Web.UI.Skins.dll
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\EntityFramework.xml
+D:\Project For Life Time\SalesMSEco\SalesMS\bin\Telerik.Web.UI.xml
+D:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.dll
+D:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.pdb
+D:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.csprojResolveAssemblyReference.cache
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\SalesMS.dll.config
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\SalesMS.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\SalesMS.pdb
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.CrystalReports.Design.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.Data.AdoDotNetInterop.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.Shared.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.Web.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\EntityFramework.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\Telerik.Web.UI.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\Telerik.Web.UI.Skins.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\stdole.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\EntityFramework.xml
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\bin\Telerik.Web.UI.xml
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\obj\Release\SalesMS.csprojResolveAssemblyReference.cache
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\obj\Release\SalesMS.dll
+C:\Users\Jahan\Desktop\SalesMSEco\SalesMS\obj\Release\SalesMS.pdb
+D:\SalesMSEco\SalesMS\bin\SalesMS.dll.config
+D:\SalesMSEco\SalesMS\bin\SalesMS.dll
+D:\SalesMSEco\SalesMS\bin\SalesMS.pdb
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.CrystalReports.Design.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.Data.AdoDotNetInterop.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportSource.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.Shared.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.Web.dll
+D:\SalesMSEco\SalesMS\bin\EntityFramework.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\SalesMSEco\SalesMS\bin\stdole.dll
+D:\SalesMSEco\SalesMS\bin\EntityFramework.xml
+D:\SalesMSEco\SalesMS\bin\Telerik.Web.UI.xml
+D:\SalesMSEco\SalesMS\obj\Release\SalesMS.csprojResolveAssemblyReference.cache
+D:\SalesMSEco\SalesMS\obj\Release\SalesMS.dll
+D:\SalesMSEco\SalesMS\obj\Release\SalesMS.pdb
+D:\SalesMSEco\SalesMS\bin\Telerik.Web.Design.dll
+D:\SalesMSEco\SalesMS\bin\Telerik.Web.UI.dll
+D:\SalesMSEco\SalesMS\bin\Telerik.Web.UI.Skins.dll
+D:\SalesMSEco\SalesMS\bin\EnvDTE.dll
+D:\SalesMSEco\SalesMS\obj\Release\SalesMS.dll.licenses
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\SalesMS.dll.config
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\SalesMS.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\SalesMS.pdb
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.CrystalReports.Design.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.CrystalReports.Engine.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.Data.AdoDotNetInterop.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportSource.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.Shared.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.Web.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\EntityFramework.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\EnvDTE.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\stdole.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\bin\EntityFramework.xml
+E:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.dll.licenses
+E:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.csproj.CoreCompileInputs.cache
+E:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.csproj.CopyComplete
+E:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.dll
+E:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.pdb
+E:\Project For Life Time\SalesMSEco\SalesMS\obj\Release\SalesMS.csprojAssemblyReference.cache
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\SalesMS.dll.config
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\SalesMS.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\SalesMS.pdb
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\EntityFramework.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\EnvDTE.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\stdole.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\EntityFramework.xml
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\obj\Release\SalesMS.csproj.AssemblyReference.cache
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\obj\Release\SalesMS.dll.licenses
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\obj\Release\SalesMS.csproj.CoreCompileInputs.cache
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\obj\Release\SalesMS.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\obj\Release\SalesMS.pdb
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportSource.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.Shared.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.Web.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.CrystalReports.Design.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.Data.AdoDotNetInterop.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\HP\Downloads\SalesMSEco-main\SalesMS\obj\Release\SalesMS.csproj.CopyComplete

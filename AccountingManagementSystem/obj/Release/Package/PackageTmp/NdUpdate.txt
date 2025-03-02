@@ -1,0 +1,2 @@
+﻿option print with header or not from sales
+omit pay mode in the sales

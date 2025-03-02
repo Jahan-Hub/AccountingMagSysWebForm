@@ -1,0 +1,22 @@
+USE [EcoSalesMS]
+GO
+
+/****** Object:  Table [dbo].[tblVillages]    Script Date: 7/30/2021 12:39:49 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tblVillages](
+	[ViId] [int] NOT NULL,
+	[Name] [varchar](100) NULL,
+	[PostId] [int] NOT NULL,
+ CONSTRAINT [PK_tblVillages_1] PRIMARY KEY CLUSTERED 
+(
+	[ViId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

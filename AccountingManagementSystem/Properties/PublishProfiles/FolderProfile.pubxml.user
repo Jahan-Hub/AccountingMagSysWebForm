@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\HP\Desktop\SaleMS</_PublishTargetUrl>
+    <History>True|2025-02-17T11:37:22.5594865Z;True|2025-02-17T17:36:09.9694388+06:00;True|2024-11-28T22:56:48.1448217+06:00;True|2024-11-28T21:34:10.9235886+06:00;True|2024-11-26T21:08:13.0487411+06:00;True|2024-11-26T21:04:34.9150397+06:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Code/All Query.txt">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Code/Tools.cs">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Code/Utility.cs">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/0.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/1.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/2.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/3.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/4.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/5.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/6.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/7.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/8.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/9.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/A.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/B.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/C.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/D.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/E.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/F.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/G.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/H.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/I.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/J.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/K.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/L.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/M.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/N.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/O.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/P.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/Q.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/R.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/S.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/T.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/U.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/V.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/W.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/X.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/Y.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadCaptcha/Z.wav">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadSpell/de-DE.tdf">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadSpell/en-US.tdf">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="App_Data/RadSpell/fr-FR.tdf">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.CrystalReports.Design.dll">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.CrystalReports.Engine.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Data.AdoDotNetInterop.dll">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ClientDoc.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommLayer.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonControls.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CommonObjectModel.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Controllers.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.CubeDefModel.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataDefModel.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.DataSetConversion.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ObjectFactory.dll">
+      <publishTime>02/04/2021 21:27:10</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.Prompting.dll">
+      <publishTime>02/04/2021 21:27:12</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.ReportDefModel.dll">
+      <publishTime>02/04/2021 21:27:12</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportAppServer.XmlSerialize.dll">
+      <publishTime>02/04/2021 21:27:12</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.ReportSource.dll">
+      <publishTime>02/04/2021 21:27:12</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Shared.dll">
+      <publishTime>02/04/2021 21:27:12</publishTime>
+    </File>
+    <File Include="bin/CrystalDecisions.Web.dll">
+      <publishTime>02/04/2021 21:27:12</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="bin/EnvDTE.dll">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="bin/SalesMS.dll">
+      <publishTime>02/17/2025 17:36:06</publishTime>
+    </File>
+    <File Include="bin/SalesMS.pdb">
+      <publishTime>02/17/2025 17:36:06</publishTime>
+    </File>
+    <File Include="bin/stdole.dll">
+      <publishTime>02/02/2002 07:02:02</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.Design.dll">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.Skins.dll">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Clients.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="DataSetSMS.xsc">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="DataSetSMS.xss">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/CompanyInfo.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/CustomerInfo.aspx">
+      <publishTime>02/10/2025 09:24:06</publishTime>
+    </File>
+    <File Include="Forms/Dashboard.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/DBBackup.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/Expense.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ItemInfo.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/Mailing.aspx">
+      <publishTime>02/14/2025 11:28:17</publishTime>
+    </File>
+    <File Include="Forms/MasterData.aspx">
+      <publishTime>02/14/2025 10:51:44</publishTime>
+    </File>
+    <File Include="Forms/OpeningStock.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/PriceOffer.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptCustomer.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptCustomerDueList.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptExpense.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptItem.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptMoneyReceive.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptPayment.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptProfitLoss.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptPurchase.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptSales.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptSalesReturn.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptStocks.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/ReportForms/rptSuppliers.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/SalesReturn.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/Settings.aspx">
+      <publishTime>02/14/2025 19:25:54</publishTime>
+    </File>
+    <File Include="Forms/Staff.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/StockAdjustments.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/SupplierInfo.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/trnItemPurchase.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/trnItemSales.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/trnMoneyReceive.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Forms/trnPayment.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>02/14/2025 11:57:41</publishTime>
+    </File>
+    <File Include="Images/Aaadd.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Administrator.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Adobe Illustator.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Applications Cascade.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Attach.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Bank Check.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Barcode.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Cancel.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Chat.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Clients.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Clipboard.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Close 2.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Close.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Coin.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Coinstack.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Contract.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Copy.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Delete.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Document Blank.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Document Write.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Document.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Download.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Echohealth Logo.jpg">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/EcoLogo.bmp">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Favorite.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Files.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Folder Open.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Folder.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Font Open Type.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Gold Bar.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Help.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Home.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Info.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Lamp.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/logo.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Mail.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Money.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Monitor.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Network Connections.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Network.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Notes.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Office Girl.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Ok.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Paste.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/PearlEnterpriseLogo.png">
+      <publishTime>02/14/2025 23:12:44</publishTime>
+    </File>
+    <File Include="Images/Pen.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Preppy.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Preview.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/SHL.JPG">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Statistics.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Text Bubble.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Thumbs.db">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/User Group.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Windows Magnifier.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/World.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Images/Zoom.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="LogIn.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Main.css">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Model1.edmx.diagram">
+      <publishTime>02/14/2025 13:01:57</publishTime>
+    </File>
+    <File Include="NdUpdate.txt">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="NewFolder1/DataSetSTK.xsc">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="NewFolder1/DataSetSTK.xss">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Notes.txt">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/18/2024 22:07:55</publishTime>
+    </File>
+    <File Include="pages.css">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Aaadd.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Administrator.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Adobe Illustator.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Applications Cascade.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Attach.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Bank Check.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Barcode.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Cancel.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Chat.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Clients.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Clipboard.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Close 2.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Close.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Coin.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Coinstack.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Contract.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Copy.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Delete.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Document Blank.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Document Write.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Document.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Download.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Favorite.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Files.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Folder Open.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Folder.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Font Open Type.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Gold Bar.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Help.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Home.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Info.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Lamp.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Mail.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Money.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Monitor.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Network Connections.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Network.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Notes.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Office Girl.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Ok.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Paste.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Pen.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Preppy.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Preview.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Statistics.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Text Bubble.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Thumbs.db">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/User Group.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Windows Magnifier.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/World.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="PNG/Zoom.png">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Reports/DataSet1.xsc">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Reports/DataSet1.xss">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Rice.jpg">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Rice2.jpg">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Rice3.jpg">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SQL Script to Production.txt">
+      <publishTime>02/14/2025 11:07:37</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[SalesCommonProcedure].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_CustomerInfo].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_Dashboard].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_Expense].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_ItemInfo].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_MoneyReceived].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_Payment].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_Purchase].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_ReportManager].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_SalesReturn].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_Sales].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_StaffInfo].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_SupplierInfo].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/StoreProcedures/[Sp_ValidationAll].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblArea].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblCategory].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblCostCenters].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblCostElements].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblCustomers].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblDepartments].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblDesignations].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblDistricts].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblEmail].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblExpense].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblItemSize].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblItems].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblLogIn].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblMoneyReceived].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblPacking].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblPayment].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblPosts].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblPurchaseDTL].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblPurchaseHDR].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblRecipient].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblRegion].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblSalesDTL].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblSalesHDR].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblSalesReturn].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblStaff].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblStocks].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblSuppliers].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblTeritory].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblThanas].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblUsers].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblUserWiseMenuPermision].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblVillages].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="SqlScripts/Tables/[tblWeights].sql">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="Validation.aspx">
+      <publishTime>07/31/2021 21:39:28</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>11/28/2024 22:56:47</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
