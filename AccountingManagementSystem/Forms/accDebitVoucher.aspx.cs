@@ -11,7 +11,6 @@ namespace AccountingManagementSystem.Forms
 {
     public partial class accDebitVoucher : Page
     {
-        AccountingManagementSystemEntities db = new AccountingManagementSystemEntities();
         SqlConnection con;
         SqlCommand cmd;
         public DataTable dtDebitCredit

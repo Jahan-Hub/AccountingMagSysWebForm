@@ -141,7 +141,7 @@
                         <asp:Label ID="Label22" runat="server" Text="Photo"></asp:Label>
                     </td>
                     <td colspan="3">
-                        <asp:Image ID="Image1" runat="server" Height="100px" Width="100px" />
+                        <asp:Image ID="Image1" runat="server" Height="100px" Width="200px" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>

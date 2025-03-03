@@ -10,7 +10,6 @@ namespace AccountingManagementSystem.Forms
 {
     public partial class accChartOfAccounts : System.Web.UI.Page
     {
-        AccountingManagementSystemEntities db = new AccountingManagementSystemEntities();
         SqlConnection con;
         SqlCommand cmd;
 

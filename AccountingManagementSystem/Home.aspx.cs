@@ -10,7 +10,6 @@ namespace AccountingManagementSystem
 {
     public partial class Home : System.Web.UI.Page
     {
-        AccountingManagementSystemEntities db = new AccountingManagementSystemEntities();
         SqlConnection con;
         SqlCommand Cmd;
         protected void Page_Load(object sender, EventArgs e)

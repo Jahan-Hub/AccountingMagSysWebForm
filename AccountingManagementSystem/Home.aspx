@@ -62,13 +62,13 @@
                         </Items>
                     </telerik:RadPanelItem>
                 
-                    <telerik:RadPanelItem runat="server" Text="Chart Of Accounts" ImageUrl="~/PNG/Clients.png">
+                    <telerik:RadPanelItem runat="server" Text="Chart Of Accounts" ImageUrl="~/PNG/Files.png">
                     </telerik:RadPanelItem>
                 
-                    <telerik:RadPanelItem runat="server" Text="Debit Voucher">
+                    <telerik:RadPanelItem runat="server" Text="Debit Voucher" ImageUrl="~/PNG/Money.png">
                     </telerik:RadPanelItem>
                 
-                    <telerik:RadPanelItem runat="server" Text="Transaction Entry" ImageUrl="~/PNG/Download.png">
+                    <telerik:RadPanelItem runat="server" Text="Transaction Entry" ImageUrl="~/PNG/Pen.png">
                     </telerik:RadPanelItem>
                     
                     <telerik:RadPanelItem runat="server" Text="Reports" ImageUrl="~/PNG/Preview.png" PostBack="False">

@@ -11,7 +11,6 @@ namespace AccountingManagementSystem.Forms.ReportForms
 {
     public partial class rptSales : System.Web.UI.Page
     {
-        AccountingManagementSystemEntities db = new AccountingManagementSystemEntities();
         SqlConnection con;
         SqlCommand Cmd;
         protected void Page_Load(object sender, EventArgs e)
