@@ -62,9 +62,6 @@
                         </Items>
                     </telerik:RadPanelItem>
                 
-                    <telerik:RadPanelItem runat="server" Text="Account Group" ImageUrl="~/PNG/Money.png">
-                    </telerik:RadPanelItem>
-                    
                     <telerik:RadPanelItem runat="server" Text="Chart Of Accounts" ImageUrl="~/PNG/Clients.png">
                     </telerik:RadPanelItem>
                 

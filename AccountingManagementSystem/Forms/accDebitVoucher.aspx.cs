@@ -40,10 +40,6 @@ namespace AccountingManagementSystem.Forms
                 return dtDebitCredit;
             }
         }
-        public void EnableControl(bool ec)
-        {
-
-        }
         public void ButtonControl(string bc)
         {
             if (bc == "L")
@@ -328,7 +324,6 @@ namespace AccountingManagementSystem.Forms
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             ButtonControl("L");
-            EnableControl(false);
             ClearControl();
             ClearControlAll();
             ClearControlPartial();

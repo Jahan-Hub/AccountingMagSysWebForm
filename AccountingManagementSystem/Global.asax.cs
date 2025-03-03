@@ -6,7 +6,6 @@ namespace AccountingManagementSystem
 {
     public class AppEnv
     {
-        // private constructor
         private AppEnv()
         {
             p_rptObject = "";

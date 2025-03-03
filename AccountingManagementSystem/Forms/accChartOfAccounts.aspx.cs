@@ -172,8 +172,8 @@ namespace AccountingManagementSystem.Forms
 
         protected void cmMainLedger_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
         {
-
             txtAccountsHead.Text = "";
+            this.rgMain.DataSource = null;
 
             int max = Convert.ToInt32(GetAutoNumber("acc_code", "acct", "acc_head", cmMainLedger.SelectedValue));
             txtAccountHeadCode.Text = (max + 1).ToString();
