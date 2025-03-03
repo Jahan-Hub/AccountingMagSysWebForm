@@ -28,16 +28,6 @@ namespace AccountingManagementSystem.Forms.ReportForms
             //{
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                 con.Open();
-                //if (cmReportFormat.SelectedValue == "Profit & Loss Accounts")
-                //{
-                //    cmd = new SqlCommand("ProcessPL", con);
-                //    cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "1";
-                //    if (dpStartDate.SelectedDate != null && dpEndDate.SelectedDate != null)
-                //        cmd.Parameters.Add("@st_dt", SqlDbType.DateTime).Value = dpStartDate.SelectedDate;
-                //    if (dpStartDate.SelectedDate != null && dpEndDate.SelectedDate != null)
-                //        cmd.Parameters.Add("@ed_dt", SqlDbType.DateTime).Value = dpEndDate.SelectedDate;
-                //    cmd.Dispose();
-                //}
 
                 if (AppEnv.Current.p_rptSource != null)
                 {
@@ -51,11 +41,11 @@ namespace AccountingManagementSystem.Forms.ReportForms
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandTimeout = 0;
 
-                if (cmReportFormat.SelectedValue == "Chart of Accounts")
-                {
-                    cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "21";
-                }
-                else if (cmReportFormat.SelectedValue == "Voucher Register")
+                //if (cmReportFormat.SelectedValue == "Chart of Accounts")
+                //{
+                //    cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "21";
+                //}
+                if (cmReportFormat.SelectedValue == "Voucher Register")
                 {
                     cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "22";
                 }
@@ -99,12 +89,12 @@ namespace AccountingManagementSystem.Forms.ReportForms
                 string tempPath = "";
                 string reportName = "";
 
-                if (cmReportFormat.SelectedValue == "Chart of Accounts")
-                {
-                    AppEnv.Current.p_rptObject = "~/Reports/ChartOfAccounts.rpt";
-                    reportName = "ChartOfAccounts";
-                }
-                else if (cmReportFormat.SelectedValue == "Voucher Register")
+                //if (cmReportFormat.SelectedValue == "Chart of Accounts")
+                //{
+                //    AppEnv.Current.p_rptObject = "~/Reports/ChartOfAccounts.rpt";
+                //    reportName = "ChartOfAccounts";
+                //}
+                if (cmReportFormat.SelectedValue == "Voucher Register")
                 {
                     AppEnv.Current.p_rptObject = "~/Reports/VoucherRegister.rpt";
                     reportName = "VoucherRegister";

@@ -36,7 +36,6 @@
                     <td>
                         <telerik:RadComboBox ID="cmReportFormat" runat="server" Width="400px" AutoPostBack="True" EmptyMessage="Select Category" OnSelectedIndexChanged="cmReportFormat_SelectedIndexChanged">
                             <Items>
-                                <telerik:RadComboBoxItem runat="server" Text="Chart of Accounts" Value="Chart of Accounts" />
                                 <telerik:RadComboBoxItem runat="server" Text="Voucher Register" Value="Voucher Register" />
                                 <telerik:RadComboBoxItem runat="server" Text="Income Statement" Value="Income Statement" />
                                 <telerik:RadComboBoxItem runat="server" Text="General Ledger" Value="General Ledger" />
