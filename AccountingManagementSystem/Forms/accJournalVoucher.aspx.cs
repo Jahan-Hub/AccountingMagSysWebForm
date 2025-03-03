@@ -28,8 +28,6 @@ namespace AccountingManagementSystem.Forms
                 dt1.Columns.Add("acc_code", typeof(string));
                 dt1.Columns.Add("ParticularCode", typeof(string));
                 dt1.Columns.Add("Particulars", typeof(string));
-                dt1.Columns.Add("Department", typeof(string));
-                dt1.Columns.Add("Salsman", typeof(string));
                 dt1.Columns.Add("Narration", typeof(string));
                 dt1.Columns.Add("Debit", typeof(decimal));
                 dt1.Columns.Add("Credit", typeof(decimal));
@@ -88,12 +86,6 @@ namespace AccountingManagementSystem.Forms
             txtTotalCredit.Text = "";
             txtTotalDebit.Text = "";
             txtTrackingID.Value = "0";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = "";
-            cmSalesMan.SelectedValue = "";
         }
         public void ClearControlAll()
         {
@@ -110,11 +102,6 @@ namespace AccountingManagementSystem.Forms
             cmCredit.SelectedValue = "";
             cmDebit.Text = "";
             cmDebit.SelectedValue = "";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = AppEnv.Current.p_UserName.ToString();
             dtDebitCredit.Clear();
             RadGrid1.Rebind();
         }
@@ -217,30 +204,6 @@ namespace AccountingManagementSystem.Forms
                     cmd.Parameters.Add("@cr_amt", SqlDbType.Decimal).Value = Convert.ToDecimal(txtCreditAmount.Text);
                     cmd.Parameters.Add("@vou_type", SqlDbType.NVarChar).Value = cmVoucherType.SelectedValue;
                     cmd.Parameters.Add("@vou_chq", SqlDbType.NVarChar).Value = txtCheckNo.Text;
-                    if (cmProjectName.Text != "")
-                    {
-                        cmd.Parameters.Add("@OfficeName", SqlDbType.NVarChar).Value = cmProjectName.Text;
-                    }
-                    else
-                    {
-                        cmd.Parameters.Add("@OfficeName", SqlDbType.NVarChar).Value = "Dhaka";
-                    }
-                    if (cmDepartment.SelectedValue != "")
-                    {
-                        cmd.Parameters.Add("@Department", SqlDbType.NVarChar).Value = cmDepartment.SelectedValue;
-                    }
-                    else
-                    {
-                        cmd.Parameters.Add("@Department", SqlDbType.NVarChar).Value = "10";
-                    }
-                    if (cmSalesMan.SelectedValue != "")
-                    {
-                        cmd.Parameters.Add("@salesmancode", SqlDbType.Int).Value = cmSalesMan.SelectedValue;
-                    }
-                    else
-                    {
-                        cmd.Parameters.Add("@salesmancode", SqlDbType.Int).Value = "1010001";
-                    }
                     cmd.Parameters.Add("@track_id", SqlDbType.Int).Value = txtTrackingID.Value;
                     cmd.Parameters.Add("@uid", SqlDbType.NVarChar).Value = AppEnv.Current.p_UserName.ToString();
                     cmd.ExecuteNonQuery();
@@ -341,84 +304,6 @@ namespace AccountingManagementSystem.Forms
         {
 
         }
-        protected void cmProjectName_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select distinct OfficeName from AreaInfo", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["OfficeName"];
-                    item.Value = dataRow["OfficeName"].ToString();
-                    cmProjectName.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
-        protected void cmDepartment_ItemsRequested(object sender, Telerik.Web.UI.RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select * from tblDepartmentGRL", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["Name"];
-                    item.Value = dataRow["Code"].ToString();
-                    cmDepartment.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
-        protected void cmSalesMan_ItemsRequested(object sender, Telerik.Web.UI.RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select EmployeeID,EmployeeName from EmployeeInfo", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["EmployeeName"];
-                    item.Value = dataRow["EmployeeID"].ToString();
-                    cmSalesMan.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
         protected void txtVoucherNo_TextChanged(object sender, EventArgs e)
         {
             try
@@ -460,7 +345,7 @@ namespace AccountingManagementSystem.Forms
                     this.dtDebitCredit.Rows.Add(newRow);
                     this.dtDebitCredit.AcceptChanges();
 
-                    if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0) // for getting credit data
+                    if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0)
                     {
                         cmCredit.SelectedValue = dt1.Rows[i]["acc_code"].ToString();
                         cmCredit.Text = dt1.Rows[i]["acc_nam"].ToString();
@@ -619,11 +504,7 @@ namespace AccountingManagementSystem.Forms
                         RadGrid1.Rebind();
                         ClearControlPartial();
                         dpVouDate.SelectedDate = Convert.ToDateTime(dt1.Rows[0]["vou_date"].ToString());
-                        cmProjectName.SelectedValue = dt1.Rows[0]["OfficeName"].ToString();
-                        cmDepartment.SelectedValue = dt1.Rows[0]["Department"].ToString();
-                        cmDepartment.Text = dt1.Rows[0]["DepartmentName"].ToString();
-                        cmSalesMan.SelectedValue = dt1.Rows[0]["salesmancode"].ToString();
-                        cmSalesMan.Text = dt1.Rows[0]["Emp_nam"].ToString();
+
                         for (int i = 0; i < dt1.Rows.Count; i++)
                         {
                             DataRow newRow = this.dtDebitCredit.NewRow();
@@ -640,7 +521,7 @@ namespace AccountingManagementSystem.Forms
                             this.dtDebitCredit.Rows.Add(newRow);
                             this.dtDebitCredit.AcceptChanges();
 
-                            if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0) // for getting credit data
+                            if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0) 
                             {
                                 cmCredit.SelectedValue = dt1.Rows[i]["acc_code"].ToString();
                                 cmCredit.Text = dt1.Rows[i]["acc_nam"].ToString();
@@ -649,8 +530,6 @@ namespace AccountingManagementSystem.Forms
                             }
                         }
                         RadGrid1.Rebind();
-
-
                         lblMessage.Text = "";
                     }
                 }
@@ -694,11 +573,6 @@ namespace AccountingManagementSystem.Forms
                         RadGrid1.Rebind();
                         ClearControlPartial();
                         dpVouDate.SelectedDate = Convert.ToDateTime(dt1.Rows[0]["vou_date"].ToString());
-                        cmProjectName.SelectedValue = dt1.Rows[0]["OfficeName"].ToString();
-                        cmDepartment.SelectedValue = dt1.Rows[0]["Department"].ToString();
-                        cmDepartment.Text = dt1.Rows[0]["DepartmentName"].ToString();
-                        cmSalesMan.SelectedValue = dt1.Rows[0]["salesmancode"].ToString();
-                        cmSalesMan.Text = dt1.Rows[0]["Emp_nam"].ToString();
 
                         for (int i = 0; i < dt1.Rows.Count; i++)
                         {
@@ -739,12 +613,12 @@ namespace AccountingManagementSystem.Forms
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             con.Open();
-            if (AccountingManagementSystem.AppEnv.Current.p_rptSource != null)
+            if (AppEnv.Current.p_rptSource != null)
             {
-                AccountingManagementSystem.AppEnv.Current.p_rptSource.Close();
-                AccountingManagementSystem.AppEnv.Current.p_rptSource.Dispose();
+                AppEnv.Current.p_rptSource.Close();
+                AppEnv.Current.p_rptSource.Dispose();
             }
-            AccountingManagementSystem.AppEnv.Current.p_rptSource = new ReportDocument();
+            AppEnv.Current.p_rptSource = new ReportDocument();
             cmd = new SqlCommand("ReportManager_AC", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 7;
@@ -758,10 +632,10 @@ namespace AccountingManagementSystem.Forms
             string tempPath = "";
             string reportName = "";
             reportName = "VoucherPrint";
-            AccountingManagementSystem.AppEnv.Current.p_rptObject = "~/Reports/Accounts/VoucherPrintJournal.rpt";
+            AppEnv.Current.p_rptObject = "~/Reports/VoucherPrintJournal.rpt";
             tempPath = @System.IO.Path.GetTempPath() + "VoucherPrint";
-            AccountingManagementSystem.AppEnv.Current.p_rptSource.Load(Server.MapPath(AccountingManagementSystem.AppEnv.Current.p_rptObject.ToString()));
-            AccountingManagementSystem.AppEnv.Current.p_rptSource.SetDataSource(dt);
+            AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
+            AppEnv.Current.p_rptSource.SetDataSource(dt);
             con.Close();
 
             if (dt.Rows.Count > 0)
@@ -772,12 +646,12 @@ namespace AccountingManagementSystem.Forms
                 ExportFormatType format = ExportFormatType.PortableDocFormat;
                 try
                 {
-                    AccountingManagementSystem.AppEnv.Current.p_rptSource.ExportToHttpResponse(format, Response, true, reportName);
+                    AppEnv.Current.p_rptSource.ExportToHttpResponse(format, Response, true, reportName);
                 }
                 finally
                 {
-                    AccountingManagementSystem.AppEnv.Current.p_rptSource.Close();
-                    AccountingManagementSystem.AppEnv.Current.p_rptSource.Dispose();
+                    AppEnv.Current.p_rptSource.Close();
+                    AppEnv.Current.p_rptSource.Dispose();
                     GC.Collect();
                 }
             }
@@ -890,39 +764,7 @@ namespace AccountingManagementSystem.Forms
         {
             txtDebitCodeParticular.Text = cmDebit.SelectedValue;
             txtCreditAmount.Text = "0.00";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = AppEnv.Current.p_UserName.ToString();
             txtDebitAmount.Focus();
-        }
-
-        protected void cmCustCode_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select Acc_code,Acc_Name from acct where Acc_head='1103'", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["Acc_Name"];
-                    item.Value = dataRow["Acc_code"].ToString();
-                    cmCustCode.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
         }
     }
 }

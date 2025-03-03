@@ -279,11 +279,6 @@
                                                                 <asp:ImageButton ID="rbtDeleteGrid" runat="server" ImageUrl="~/Images/Delete.png" OnClick="rbtDeleteGrid_Click" TabIndex="5" ToolTip="Delete" CommandName="GridDelete" />
                                                             </ItemTemplate>
                                                         </telerik:GridTemplateColumn>
-                                                        <telerik:GridBoundColumn DataField="OfficeName" Display="False" FilterControlAltText="Filter OfficeName column" HeaderText="OfficeName" SortExpression="OfficeName" UniqueName="OfficeName">
-                                                            <ColumnValidationSettings>
-                                                                <ModelErrorMessage Text="" />
-                                                            </ColumnValidationSettings>
-                                                        </telerik:GridBoundColumn>
                                                         <telerik:GridBoundColumn DataField="Department" Display="False" FilterControlAltText="Filter Department column" HeaderText="Department" SortExpression="Department" UniqueName="Department">
                                                             <ColumnValidationSettings>
                                                                 <ModelErrorMessage Text="" />

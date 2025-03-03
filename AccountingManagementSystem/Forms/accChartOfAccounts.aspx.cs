@@ -223,7 +223,7 @@ namespace AccountingManagementSystem.Forms
             Dap.Fill(dt);
             cmd.Dispose();
             string reportName = "";
-            AppEnv.Current.p_rptObject = "~/Reports/Accounts/ChartOfAccounts.rpt";
+            AppEnv.Current.p_rptObject = "~/Reports/ChartOfAccounts.rpt";
             reportName = "ChartOfAccounts";
             reportName = "ChartOfAccounts";
             AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));

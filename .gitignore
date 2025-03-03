@@ -9,3 +9,5 @@ AccountingManagementSystem/obj/Debug/DesignTimeResolveAssemblyReferencesInput.ca
 AccountingManagementSystem/AccountingManagementSystem.csproj
 .vs/AccountingManagementSystem/v16/.suo
 *.dll
+*.dll
+.vs/AccountingManagementSystem/v16/.suo
