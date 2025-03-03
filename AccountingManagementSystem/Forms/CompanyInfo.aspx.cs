@@ -18,7 +18,7 @@ namespace AccountingManagementSystem.Forms
             {
                 ClearControl();
 
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 con.Open();
                 cmd = new SqlCommand("select * from tblCompany", con);
                 cmd.CommandType = CommandType.Text;
@@ -66,7 +66,7 @@ namespace AccountingManagementSystem.Forms
         }
         private void SaveData()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             try
             {

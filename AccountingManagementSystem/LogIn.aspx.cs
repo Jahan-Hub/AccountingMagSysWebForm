@@ -15,7 +15,7 @@ namespace AccountingManagementSystem
         {
             if(!IsPostBack)
             {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 con.Open();
                 Cmd = new SqlCommand("Sp_CompanyInfo", con);
                 Cmd.CommandType = CommandType.StoredProcedure;
@@ -53,7 +53,7 @@ namespace AccountingManagementSystem
             }
             else
             {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 con.Open();
                 Cmd = new SqlCommand("Sp_Login", con);
                 Cmd.CommandType = CommandType.StoredProcedure;

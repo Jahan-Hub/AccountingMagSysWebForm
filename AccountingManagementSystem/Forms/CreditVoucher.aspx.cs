@@ -117,7 +117,7 @@ namespace AccountingManagementSystem.Forms
         }
         public string GetAutoNumber(string fieldName, string tableName, string WhereCondition, string ControlName)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             string ss = "Select  isnull(Max(convert(int," + fieldName + ")),0) from " + tableName + " where " + WhereCondition + " = '" + ControlName + "'";
             SqlCommand cmd = new SqlCommand(ss, con);
 
@@ -202,7 +202,7 @@ namespace AccountingManagementSystem.Forms
                 }
                 else
                 {
-                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                     con.Open();
 
                     cmd = new SqlCommand("Pro_Save_TempVou_Acc", con);
@@ -238,7 +238,7 @@ namespace AccountingManagementSystem.Forms
         }
         public void GridReloadOnly()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("flush_vou", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -326,7 +326,7 @@ namespace AccountingManagementSystem.Forms
         {
             try
             {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 con.Open();
                 cmd = new SqlCommand("flush_vou", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -388,7 +388,7 @@ namespace AccountingManagementSystem.Forms
         }
         protected void cmDebit_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("ComboLoadDataForAll", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -425,7 +425,7 @@ namespace AccountingManagementSystem.Forms
         }
         protected void cmCredit_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("ComboLoadDataForAll", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -470,7 +470,7 @@ namespace AccountingManagementSystem.Forms
                 GridDataItem item = (GridDataItem)e.Item;
                 int RID = Convert.ToInt32(item["track_id"].Text);
 
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 con.Open();
 
                 cmd = new SqlCommand("[pro_delete_tempvou]", con);
@@ -543,7 +543,7 @@ namespace AccountingManagementSystem.Forms
         {
             try
             {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 con.Open();
                 cmd = new SqlCommand("PostingInLedger_AC", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -581,7 +581,7 @@ namespace AccountingManagementSystem.Forms
                     {
                         dtDebitCredit.Clear();
 
-                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                         con.Open();
                         cmd = new SqlCommand("flush_vou", con);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -650,7 +650,7 @@ namespace AccountingManagementSystem.Forms
                     }
                     else
                     {
-                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                         con.Open();
                         cmd = new SqlCommand("flush_vou", con);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -704,7 +704,7 @@ namespace AccountingManagementSystem.Forms
         }
         protected void btnPreview_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             if (AppEnv.Current.p_rptSource != null)
             {
@@ -755,7 +755,7 @@ namespace AccountingManagementSystem.Forms
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("[DeleteVou]", con);
             cmd.CommandType = CommandType.StoredProcedure;

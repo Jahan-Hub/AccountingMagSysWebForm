@@ -22,7 +22,7 @@ namespace AccountingManagementSystem.Forms
                 File.Delete(filepath);
             }
 
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
 
             string sql = @"backup database AccountingMSDB to disk='" + filepath + "'";

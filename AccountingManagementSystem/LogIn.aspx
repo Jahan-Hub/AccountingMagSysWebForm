@@ -50,7 +50,7 @@
                 <td>
                     <telerik:RadComboBox ID="RadComboBox1" EmptyMessage="Select Username" Runat="server" DataSourceID="dsUser" DataTextField="UserName" DataValueField="Id">
                     </telerik:RadComboBox>
-                    <asp:SqlDataSource ID="dsUser" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT [Id], [UserName] FROM [tblLogIn]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="dsUser" runat="server" ConnectionString="<%$ ConnectionStrings:con %>" SelectCommand="SELECT [Id], [UserName] FROM [tblLogIn]"></asp:SqlDataSource>
                 </td>
                 <td>
                     &nbsp;</td>

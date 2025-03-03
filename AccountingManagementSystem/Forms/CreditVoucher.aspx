@@ -291,7 +291,7 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td colspan="2">
-                        <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:con %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
                     </td>
                     <td>&nbsp;</td>
                     <td>

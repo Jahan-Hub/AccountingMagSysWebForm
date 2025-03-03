@@ -14,11 +14,11 @@ public class Tools
     SqlCommand cmd;
     //SqlDataAdapter adpt;
     //DataSet ds;
-    string scon = ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString;
+    string scon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
     public Tools()
 	{
-        string scon = ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString;
+        string scon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 
          con = new SqlConnection(scon);
 	}

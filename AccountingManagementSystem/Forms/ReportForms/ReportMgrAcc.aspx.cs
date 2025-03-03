@@ -26,7 +26,7 @@ namespace AccountingManagementSystem.Forms.ReportForms
         {
             //try
             //{
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 con.Open();
 
                 if (AppEnv.Current.p_rptSource != null)
@@ -190,7 +190,7 @@ namespace AccountingManagementSystem.Forms.ReportForms
         {
             //try
             //{
-            //    con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            //    con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             //    con.Open();
             //    cmd = new SqlCommand("select * from acct ", con);
             //    cmd.CommandType = CommandType.Text;
@@ -215,7 +215,7 @@ namespace AccountingManagementSystem.Forms.ReportForms
 
         protected void cmACC_Name_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("ComboLoadDataForAll", con);
             cmd.CommandType = CommandType.StoredProcedure;

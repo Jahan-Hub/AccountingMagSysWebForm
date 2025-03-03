@@ -45,7 +45,7 @@
                     <td>
                         <telerik:RadComboBox ID="cmAccType" runat="server" AutoPostBack="True" OnSelectedIndexChanged="cmAccType_SelectedIndexChanged" EmptyMessage="Select Account Type" DataSourceID="dsMG" DataTextField="MainGroupText" DataValueField="MainGroup">
                         </telerik:RadComboBox>
-                        <asp:SqlDataSource ID="dsMG" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT DISTINCT MainGroup, MainGroupText FROM tblAccGroup"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="dsMG" runat="server" ConnectionString="<%$ ConnectionStrings:con %>" SelectCommand="SELECT DISTINCT MainGroup, MainGroupText FROM tblAccGroup"></asp:SqlDataSource>
                     </td>
                     <td>
                         <asp:Label ID="Label7" runat="server" Text="Sub Type"></asp:Label>
@@ -53,7 +53,7 @@
                     <td>
                         <telerik:RadComboBox ID="cmSubType" ViewStateMode="Enabled" runat="server" EmptyMessage="Select Sub Type" AutoPostBack="True" DataSourceID="dsSG" DataTextField="SubGroupText" DataValueField="SubGroup" Width="250px" OnSelectedIndexChanged="cmSubType_SelectedIndexChanged" AccessibilityMode="True">
                         </telerik:RadComboBox>
-                        <asp:SqlDataSource ID="dsSG" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT SubGroup, SubGroupText, MainGroup FROM tblAccGroup WHERE (MainGroup = @MainGroup)">
+                        <asp:SqlDataSource ID="dsSG" runat="server" ConnectionString="<%$ ConnectionStrings:con %>" SelectCommand="SELECT SubGroup, SubGroupText, MainGroup FROM tblAccGroup WHERE (MainGroup = @MainGroup)">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="cmAccType" Name="MainGroup" PropertyName="SelectedValue" Type="Int32" />
                             </SelectParameters>
@@ -67,7 +67,7 @@
                     <td class="auto-style4">
                         <telerik:RadComboBox ID="cmMainLedger" Filter="Contains" runat="server" EmptyMessage="Select Main Ledger" DataSourceID="dsML" DataTextField="acc_name" DataValueField="acc_code" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="cmMainLedger_SelectedIndexChanged">
                         </telerik:RadComboBox>
-                        <asp:SqlDataSource ID="dsML" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT * FROM [acct] WHERE ([acc_head] = @acc_head)">
+                        <asp:SqlDataSource ID="dsML" runat="server" ConnectionString="<%$ ConnectionStrings:con %>" SelectCommand="SELECT * FROM [acct] WHERE ([acc_head] = @acc_head)">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="cmSubType" Name="acc_head" PropertyName="SelectedValue" Type="String" />
                             </SelectParameters>

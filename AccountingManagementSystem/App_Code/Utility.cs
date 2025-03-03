@@ -13,7 +13,7 @@
 //    SqlConnection con;
 //    public Utility()
 //    {
-//        string sCon = ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString;
+//        string sCon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
 //        con = new SqlConnection(sCon);
 //    }
 

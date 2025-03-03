@@ -85,7 +85,7 @@ namespace AccountingManagementSystem.Forms
         }
         private void ReloadMainGrid()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("post_open_bal", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -103,7 +103,7 @@ namespace AccountingManagementSystem.Forms
         private void DataRefillForGrid()
         {
             GridDataItem selectedItem = (GridDataItem)rgMain.SelectedItems[0];
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("post_open_bal", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -149,7 +149,7 @@ namespace AccountingManagementSystem.Forms
             {
                 try
                 {
-                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                     con.Open();
                     try
                     {
@@ -214,7 +214,7 @@ namespace AccountingManagementSystem.Forms
         }
         protected void cmAcctCode_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("ComboLoadDataForAll", con);
             cmd.CommandType = CommandType.StoredProcedure;

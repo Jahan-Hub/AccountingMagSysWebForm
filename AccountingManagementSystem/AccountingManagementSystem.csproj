@@ -385,6 +385,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlScripts\ScriptToRun.sql" />
+    <Content Include="SqlScripts\SP_View_FnScriptAccounting.sql" />
+    <Content Include="SqlScripts\TablesAccountingScript.sql" />
     <Content Include="Validation.aspx" />
     <Content Include="web.config">
       <SubType>Designer</SubType>

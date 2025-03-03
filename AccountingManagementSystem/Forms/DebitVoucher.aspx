@@ -318,7 +318,7 @@
                         <asp:Label ID="lblMessage" runat="server" ForeColor="#CC0000"></asp:Label>
                     </td>
                     <td>
-                        <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:con %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
                     </td>
                     <td>
                         <telerik:RadNumericTextBox ID="txtTotalDebit" runat="server" Width="100px" ReadOnly="True" TabIndex="25">
