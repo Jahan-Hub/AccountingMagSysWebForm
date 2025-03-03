@@ -54,13 +54,8 @@
                         <asp:Label ID="Label2" runat="server" Text="Account Head"></asp:Label>
                     </td>
                     <td>
-                        <telerik:RadComboBox ID="cmAccountHead" Filter="Contains" runat="server" EmptyMessage="Select Account Head" DataSourceID="dsML" DataTextField="acc_name" DataValueField="acc_code" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="cmAccountHead_SelectedIndexChanged" OnItemsRequested="cmAccountHead_ItemsRequested">
+                        <telerik:RadComboBox ID="cmAccountHead" Filter="Contains" runat="server" EmptyMessage="Select Account Head" DataTextField="acc_name" DataValueField="acc_code" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="cmAccountHead_SelectedIndexChanged" OnItemsRequested="cmAccountHead_ItemsRequested">
                         </telerik:RadComboBox>
-                        <asp:SqlDataSource ID="dsML" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT * FROM [acct] WHERE ([acc_head] = @acc_head)">
-                            <SelectParameters>
-                                <asp:ControlParameter ControlID="cmSubType" Name="acc_head" PropertyName="SelectedValue" Type="String" />
-                            </SelectParameters>
-                        </asp:SqlDataSource>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -72,14 +67,6 @@
                     </td>
                     <td>
                                 <telerik:RadComboBox ID="cmACC_Name" EnableLoadOnDemand="true" DropDownWidth="350px" Filter="Contains" Runat="server" Width="400px" OnItemsRequested="cmACC_Name_ItemsRequested" AutoPostBack="True" OnSelectedIndexChanged="cmACC_Name_SelectedIndexChanged" TabIndex="3">
-                                    <%--<HeaderTemplate>
-                                        <table cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td style="font-family: Arial; font-size: 10px; width: 250px;">Account Head</td>
-                                                <td style="font-family: Arial; font-size: 10px; width: 100px;">Account Code</td>
-                                            </tr>
-                                        </table>
-                                    </HeaderTemplate>--%>
                                     <ItemTemplate>
                                         <table cellpadding="0" cellspacing="0">
                                             <tr>

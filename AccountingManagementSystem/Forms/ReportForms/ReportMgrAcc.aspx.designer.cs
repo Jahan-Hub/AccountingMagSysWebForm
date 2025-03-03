@@ -69,15 +69,6 @@ namespace AccountingManagementSystem.Forms.ReportForms
         protected global::Telerik.Web.UI.RadComboBox cmAccountHead;
 
         /// <summary>
-        /// dsML control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsML;
-
-        /// <summary>
         /// Label111 control.
         /// </summary>
         /// <remarks>

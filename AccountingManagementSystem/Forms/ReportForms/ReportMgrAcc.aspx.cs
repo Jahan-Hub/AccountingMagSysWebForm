@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Telerik.Web.UI;
 
-namespace AccountingManagementSystem.ReportForms.Forms
+namespace AccountingManagementSystem.Forms.ReportForms
 {
     public partial class ReportMgrAcc : System.Web.UI.Page
     {
@@ -14,13 +14,8 @@ namespace AccountingManagementSystem.ReportForms.Forms
         SqlCommand cmd;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //dpStartDate.SelectedDate = DateTime.Now;
-            //dpEndDate.SelectedDate = DateTime.Now;
-
-            //if (AppEnv.Current.p_UserName.ToString() == "Un Authorized User")
-            //{
-            //    Response.Redirect("~/login.aspx");
-            //}
+            dpStartDate.SelectedDate = DateTime.Now.AddYears(-2);
+            dpEndDate.SelectedDate = DateTime.Now;
         }
 
         protected void cmReportFormat_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
@@ -29,33 +24,20 @@ namespace AccountingManagementSystem.ReportForms.Forms
         }
         protected void btnPreview_Click(object sender, EventArgs e)
         {
-
-            //       < telerik:RadComboBoxItem runat = "server" Text = "Chart of Accounts" Value = "Chart of Accounts" />
-
-            //< telerik:RadComboBoxItem runat = "server" Text = "Voucher Register" Value = "Voucher Register" />
-
-            //     < telerik:RadComboBoxItem runat = "server" Text = "Income Statement" Value = "Income Statement" />
-
-            //          < telerik:RadComboBoxItem runat = "server" Text = "General Ledger" Value = "General Ledger" />
-
-            //               < telerik:RadComboBoxItem runat = "server" Text = "Trial Balance" Value = "Trial Balance" />
-
-            //                    < telerik:RadComboBoxItem runat = "server" Text = "Balance Sheet" Value = "Balance Sheet" />
-
-            try
-            {
+            //try
+            //{
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                 con.Open();
-                if (cmReportFormat.SelectedValue == "Profit & Loss Accounts")
-                {
-                    cmd = new SqlCommand("ProcessPL", con);
-                    cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "1";
-                    if (dpStartDate.SelectedDate != null && dpEndDate.SelectedDate != null)
-                        cmd.Parameters.Add("@st_dt", SqlDbType.DateTime).Value = dpStartDate.SelectedDate;
-                    if (dpStartDate.SelectedDate != null && dpEndDate.SelectedDate != null)
-                        cmd.Parameters.Add("@ed_dt", SqlDbType.DateTime).Value = dpEndDate.SelectedDate;
-                    cmd.Dispose();
-                }
+                //if (cmReportFormat.SelectedValue == "Profit & Loss Accounts")
+                //{
+                //    cmd = new SqlCommand("ProcessPL", con);
+                //    cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "1";
+                //    if (dpStartDate.SelectedDate != null && dpEndDate.SelectedDate != null)
+                //        cmd.Parameters.Add("@st_dt", SqlDbType.DateTime).Value = dpStartDate.SelectedDate;
+                //    if (dpStartDate.SelectedDate != null && dpEndDate.SelectedDate != null)
+                //        cmd.Parameters.Add("@ed_dt", SqlDbType.DateTime).Value = dpEndDate.SelectedDate;
+                //    cmd.Dispose();
+                //}
 
                 if (AppEnv.Current.p_rptSource != null)
                 {
@@ -94,9 +76,9 @@ namespace AccountingManagementSystem.ReportForms.Forms
                     cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "33";
                 }
 
-                if (cmAccountHead.SelectedValue != "")
-                    cmd.Parameters.Add("@Acc_Code", SqlDbType.Int).Value = cmAccountHead.SelectedValue;
-                if (cmACC_Name.SelectedValue != "" && cmAccountHead.SelectedValue == "")
+                //if (cmAccountHead.SelectedValue != "")
+                //    cmd.Parameters.Add("@Acc_Code", SqlDbType.Int).Value = cmAccountHead.SelectedValue;
+                if (cmACC_Name.SelectedValue != "")
                     cmd.Parameters.Add("@Acc_Code", SqlDbType.Int).Value = cmACC_Name.SelectedValue;
 
                 if (cmVoucherType.SelectedValue != "")
@@ -148,8 +130,7 @@ namespace AccountingManagementSystem.ReportForms.Forms
                     reportName = "BalanceSheet";
                 }
 
-
-                tempPath = @System.IO.Path.GetTempPath() + "CustomerList";
+                tempPath = @System.IO.Path.GetTempPath() + "";
                 AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
                 AppEnv.Current.p_rptSource.SetDataSource(dt);
                 con.Close();
@@ -172,7 +153,7 @@ namespace AccountingManagementSystem.ReportForms.Forms
                     Response.Buffer = false;
                     Response.ClearContent();
                     Response.ClearHeaders();
-                    //////////////////////
+
                     if (rbtnPdf.Checked == true)
                     {
                         ExportFormatType format = ExportFormatType.PortableDocFormat;
@@ -188,17 +169,17 @@ namespace AccountingManagementSystem.ReportForms.Forms
                 {
                     lblMessage.Text = "Data is not available.";
                 }
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-            finally
-            {
-                AppEnv.Current.p_rptSource.Close();
-                AppEnv.Current.p_rptSource.Dispose();
-                GC.Collect();
-            }         
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblMessage.Text = ex.Message;
+            //}
+            //finally
+            //{
+            //    AppEnv.Current.p_rptSource.Close();
+            //    AppEnv.Current.p_rptSource.Dispose();
+            //    GC.Collect();
+            //}         
         }
 
         protected void cmAccType_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
@@ -207,8 +188,8 @@ namespace AccountingManagementSystem.ReportForms.Forms
         }
         protected void cmSubType_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
-            cmAccountHead.Text = "";
-            cmAccountHead.SelectedValue = "";
+            //cmAccountHead.Text = "";
+            //cmAccountHead.SelectedValue = "";
         }
         protected void cmAccountHead_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
@@ -217,60 +198,28 @@ namespace AccountingManagementSystem.ReportForms.Forms
 
         protected void cmAccountHead_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
         {
-
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select * from acct ", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["Acc_Name"];
-                    item.Value = dataRow["Acc_Code"].ToString();
-                    cmAccountHead.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-
-
-            //con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-            //con.Open();
-            //cmd = new SqlCommand("ComboLoadDataForAll", con);
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.Add("@Mode", SqlDbType.Int).Value = 13;
-            //cmd.Parameters.Add("@SearchText", SqlDbType.VarChar).Value = e.Text;
-            //cmd.Parameters.Add("@OrderByFld", SqlDbType.VarChar).Value = cmAccountHead.Text;
-            //cmd.Parameters.Add("@StartNo", SqlDbType.Int).Value = 0;
-            //cmd.Parameters.Add("@EndNo", SqlDbType.Int).Value = 20;
-            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            //DataSet ds = new DataSet();
-            //DataTable dt = new DataTable();
-            //adapter.Fill(ds);
-            //dt = ds.Tables[1];
-            //foreach (DataRow dataRow in dt.Rows)
+            //try
             //{
-            //    RadComboBoxItem item = new RadComboBoxItem();
-            //    item.Text = (string)dataRow["acc_name"].ToString();
-            //    item.Value = dataRow["acc_code"].ToString();
-
-            //    string code = (string)dataRow["acc_code"].ToString();
-            //    string descr = (string)dataRow["acc_name"].ToString();
-
-            //    item.Attributes.Add("acc_code", code.ToString());
-            //    item.Attributes.Add("acc_name", descr.ToString());
-
-            //    cmAccountHead.Items.Add(item);
-            //    item.DataBind();
+            //    con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+            //    con.Open();
+            //    cmd = new SqlCommand("select * from acct ", con);
+            //    cmd.CommandType = CommandType.Text;
+            //    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            //    DataTable dt = new DataTable();
+            //    adapter.Fill(dt);
+            //    foreach (DataRow dataRow in dt.Rows)
+            //    {
+            //        RadComboBoxItem item = new RadComboBoxItem();
+            //        item.Text = (string)dataRow["Acc_Name"];
+            //        item.Value = dataRow["Acc_Code"].ToString();
+            //        cmAccountHead.Items.Add(item);
+            //        item.DataBind();
+            //    }
+            //    con.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblMessage.Text = ex.Message;
             //}
         }
 

@@ -136,7 +136,7 @@ namespace AccountingManagementSystem
             }
             if (s == "Transaction Entry")
             {
-                LoadIFrame("Forms/ReportForms/rptTransactionEntry.aspx");
+                LoadIFrame("Forms/ReportForms/ReportMgrAcc.aspx");
             }
         }
     }
