@@ -15,10 +15,21 @@ namespace AccountingManagementSystem
         {
             if(!IsPostBack)
             {
+                //cmd = new SqlCommand("pro_acct_AC", con);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "5";
+                //cmd.Parameters.Add("@acc_head", SqlDbType.VarChar).Value = cmMainLedger.SelectedValue;
+                //SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                //DataSet ds = new DataSet();
+                //DataTable dt = new DataTable();
+                //adpt.Fill(ds);
+                //dt = ds.Tables[0];
+
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                 con.Open();
-                Cmd = new SqlCommand("select * from tblCompany", con);
-                Cmd.CommandType = CommandType.Text;
+                Cmd = new SqlCommand("Sp_CompanyInfo", con);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "1";
                 SqlDataReader Dr;
                 Dr = Cmd.ExecuteReader();
                 while (Dr.Read())
@@ -54,7 +65,7 @@ namespace AccountingManagementSystem
             {
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                 con.Open();
-                Cmd = new SqlCommand("SalesCommonProcedure", con);
+                Cmd = new SqlCommand("Sp_Login", con);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Cmd.Parameters.Add("@p_OpMode", SqlDbType.VarChar).Value = 1;
                 SqlDataReader dr = Cmd.ExecuteReader();

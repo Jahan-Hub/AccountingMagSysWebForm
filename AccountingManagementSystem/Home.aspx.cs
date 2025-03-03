@@ -25,8 +25,9 @@ namespace AccountingManagementSystem
                 }
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                 con.Open();
-                Cmd = new SqlCommand("select * from tblCompany", con);
-                Cmd.CommandType = CommandType.Text;
+                Cmd = new SqlCommand("Sp_CompanyInfo", con);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "1";
                 SqlDataReader Dr;
                 Dr = Cmd.ExecuteReader();
                 while (Dr.Read())

@@ -116,10 +116,7 @@
     <Content Include="Forms\Dashboard.aspx" />
     <Content Include="Forms\DBBackup.aspx" />
     <Content Include="Forms\ReportForms\rptSales.aspx" />
-    <Content Include="Images\Echohealth Logo.jpg" />
-    <Content Include="Images\EcoLogo.bmp" />
     <Content Include="Images\logo.png" />
-    <Content Include="Images\PearlEnterpriseLogo.png" />
     <Content Include="Main.css" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -469,7 +466,6 @@
     <Content Include="Images\Pen.png" />
     <Content Include="Images\Preppy.png" />
     <Content Include="Images\Preview.png" />
-    <Content Include="Images\SHL.JPG" />
     <Content Include="Images\Statistics.png" />
     <Content Include="Images\Text Bubble.png" />
     <Content Include="Images\User Group.png" />
