@@ -68,6 +68,13 @@
                     <telerik:RadPanelItem runat="server" Text="Debit Voucher" ImageUrl="~/PNG/Money.png">
                     </telerik:RadPanelItem>
                 
+                    <telerik:RadPanelItem runat="server" Text="Credit Voucher">
+                    </telerik:RadPanelItem>
+                    <telerik:RadPanelItem runat="server" Text="Journal Voucher">
+                    </telerik:RadPanelItem>
+                    <telerik:RadPanelItem runat="server" Text="Opening Balance">
+                    </telerik:RadPanelItem>
+                
                     <telerik:RadPanelItem runat="server" Text="Transaction Entry" ImageUrl="~/PNG/Pen.png">
                     </telerik:RadPanelItem>
                     

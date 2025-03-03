@@ -108,6 +108,18 @@ namespace AccountingManagementSystem
             {
                 LoadIFrame("Forms/accDebitVoucher.aspx");
             }
+            if (s == "Credit Voucher")
+            {
+                LoadIFrame("Forms/accCreditVoucher.aspx");
+            }
+            if (s == "Journal Voucher")
+            {
+                LoadIFrame("Forms/accJournalVoucher.aspx");
+            }
+            if (s == "Opening Balance")
+            {
+                LoadIFrame("Forms/AccOpeningBalance.aspx");
+            }
             if (s == "Transaction Entry")
             {
                 LoadIFrame("Forms/TransactionEntry.aspx");

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AccOpeningBalance.aspx.cs" Inherits="MAANBDERP.Forms.AccOpeningBalance" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AccOpeningBalance.aspx.cs" Inherits="AccountingManagementSystem.Forms.AccOpeningBalance" %>
 
 <!DOCTYPE html>
 
@@ -65,7 +65,7 @@
                     </telerik:RadDatePicker>
                 </td>
                 <td>
-                                        <telerik:RadComboBox ID="cmOfficeName" EnableLoadOnDemand="True" Filter="Contains" Runat="server" EmptyMessage="Select Project" TabIndex="12" OnItemsRequested="cmOfficeName_ItemsRequested" OnSelectedIndexChanged="cmOfficeName_SelectedIndexChanged">
+                                        <telerik:RadComboBox ID="cmOfficeName" EnableLoadOnDemand="True" Filter="Contains" Runat="server" EmptyMessage="Select Project" TabIndex="12" OnItemsRequested="cmOfficeName_ItemsRequested">
                     </telerik:RadComboBox>
                 </td>
                 <td>
@@ -103,7 +103,7 @@
                 <td>
                     &nbsp;</td>
                 <td>
-                    <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:MAANBDERPConnectionString %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
                 </td>
                 <td>
                     <asp:Label ID="lblOperationMode" runat="server" ForeColor="#CC0066"></asp:Label>
@@ -128,10 +128,6 @@
                 <td colspan="6">     <telerik:RadButton ID="btnNew" runat="server" Text="New" OnClick="btnNew_Click">
                             </telerik:RadButton>
                             <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click">
-                            </telerik:RadButton>
-                            <telerik:RadButton ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click">
-                            </telerik:RadButton>
-                            <telerik:RadButton ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click">
                             </telerik:RadButton>
                     <asp:Label ID="lblMessage" runat="server" ForeColor="#CC0000"></asp:Label>
                 </td>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accJournalVoucher.aspx.cs" Inherits="MAANBDERP.Forms.accJournalVoucher" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="accJournalVoucher.aspx.cs" Inherits="AccountingManagementSystem.Forms.accJournalVoucher" %>
 
 <!DOCTYPE html>
 
@@ -225,7 +225,7 @@
                     </telerik:RadComboBox>
                                 <asp:Label ID="Label26" runat="server" Text="Customer"></asp:Label>
                 &nbsp;
-                    <telerik:RadComboBox ID="cmCustCode" EnableLoadOnDemand="true" Filter="Contains" Runat="server" EmptyMessage="Select Salesman" OnItemsRequested="cmCustCode_ItemsRequested" TabIndex="13" AutoPostBack="True" OnSelectedIndexChanged="cmCustCode_SelectedIndexChanged" Width="200px">
+                    <telerik:RadComboBox ID="cmCustCode" EnableLoadOnDemand="true" Filter="Contains" Runat="server" EmptyMessage="Select Salesman" OnItemsRequested="cmCustCode_ItemsRequested" TabIndex="13" AutoPostBack="True" Width="200px">
                     </telerik:RadComboBox>
                             </td>
                         </tr>
@@ -312,7 +312,7 @@
                 <td>
                     &nbsp;</td>
                 <td colspan="2">
-                    <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:MAANBDERPConnectionString %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="dsProject" runat="server" ConnectionString="<%$ ConnectionStrings:AccountingManagementSystemConnectionString %>" SelectCommand="SELECT [prj_code], [prj_name] FROM [project]"></asp:SqlDataSource>
                 </td>
                 <td>
                     &nbsp;</td>
@@ -342,10 +342,6 @@
                             <telerik:RadButton ID="btnNext" runat="server" Text="&gt;&gt;&gt;" OnClick="btnNext_Click" TabIndex="18">
                             </telerik:RadButton>
                             <telerik:RadButton ID="btnPrevious" runat="server" Text="&lt;&lt;&lt;" OnClick="btnPrevious_Click" TabIndex="19">
-                            </telerik:RadButton>
-                            <telerik:RadButton ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" TabIndex="20">
-                            </telerik:RadButton>
-                            <telerik:RadButton ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" TabIndex="21">
                             </telerik:RadButton>
                             <telerik:RadButton ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" TabIndex="12">
                             </telerik:RadButton>

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MAANBDERP.Forms {
-    
-    
-    public partial class accCreditVoucher {
-        
+namespace AccountingManagementSystem.Forms
+{
+
+
+    public partial class accCreditVoucher
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// RadScriptManager1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
-        
+
         /// <summary>
         /// lblVoucherType control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblVoucherType;
-        
+
         /// <summary>
         /// lblOperationMode control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblOperationMode;
-        
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// cmVoucherType control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cmVoucherType;
-        
+
         /// <summary>
         /// Label7 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
-        
+
         /// <summary>
         /// txtVoucherNo control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadNumericTextBox txtVoucherNo;
-        
+
         /// <summary>
         /// Label8 control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label8;
-        
+
         /// <summary>
         /// dpVouDate control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadDatePicker dpVouDate;
-        
+
         /// <summary>
         /// Label23 control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label23;
-        
+
         /// <summary>
         /// Label13 control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label13;
-        
+
         /// <summary>
         /// Label11 control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label11;
-        
+
         /// <summary>
         /// txtTrackingID control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField txtTrackingID;
-        
+
         /// <summary>
         /// cmDebit control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cmDebit;
-        
+
         /// <summary>
         /// txtDebitCodeParticular control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtDebitCodeParticular;
-        
+
         /// <summary>
         /// txtCheckNo control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtCheckNo;
-        
+
         /// <summary>
         /// Label22 control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label22;
-        
+
         /// <summary>
         /// Label18 control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label18;
-        
+
         /// <summary>
         /// Label14 control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
-        
+
         /// <summary>
         /// Label15 control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label15;
-        
+
         /// <summary>
         /// cmCredit control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cmCredit;
-        
+
         /// <summary>
         /// txtCreditCode control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtCreditCode;
-        
+
         /// <summary>
         /// txtDebitAmount control.
         /// </summary>
@@ -227,7 +229,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadNumericTextBox txtDebitAmount;
-        
+
         /// <summary>
         /// txtCreditAmount control.
         /// </summary>
@@ -236,79 +238,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadNumericTextBox txtCreditAmount;
-        
-        /// <summary>
-        /// Label24 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
-        
-        /// <summary>
-        /// cmProjectName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cmProjectName;
-        
-        /// <summary>
-        /// Label16 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label16;
-        
-        /// <summary>
-        /// cmDepartment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cmDepartment;
-        
-        /// <summary>
-        /// Label25 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label25;
-        
-        /// <summary>
-        /// cmSalesMan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cmSalesMan;
-        
-        /// <summary>
-        /// Label26 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
-        
-        /// <summary>
-        /// cmCustCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cmCustCode;
-        
+
         /// <summary>
         /// Label19 control.
         /// </summary>
@@ -317,7 +247,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label19;
-        
+
         /// <summary>
         /// txtNarattion control.
         /// </summary>
@@ -326,7 +256,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox txtNarattion;
-        
+
         /// <summary>
         /// RadGrid1 control.
         /// </summary>
@@ -335,7 +265,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid RadGrid1;
-        
+
         /// <summary>
         /// dsProject control.
         /// </summary>
@@ -344,7 +274,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource dsProject;
-        
+
         /// <summary>
         /// txtTotalDebit control.
         /// </summary>
@@ -353,7 +283,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadNumericTextBox txtTotalDebit;
-        
+
         /// <summary>
         /// txtTotalCredit control.
         /// </summary>
@@ -362,7 +292,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadNumericTextBox txtTotalCredit;
-        
+
         /// <summary>
         /// lblMessage control.
         /// </summary>
@@ -371,7 +301,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
-        
+
         /// <summary>
         /// btnNew control.
         /// </summary>
@@ -380,7 +310,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnNew;
-        
+
         /// <summary>
         /// btnSave control.
         /// </summary>
@@ -389,7 +319,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnSave;
-        
+
         /// <summary>
         /// btnPosting control.
         /// </summary>
@@ -398,7 +328,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnPosting;
-        
+
         /// <summary>
         /// btnNext control.
         /// </summary>
@@ -407,7 +337,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnNext;
-        
+
         /// <summary>
         /// btnPrevious control.
         /// </summary>
@@ -416,25 +346,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnPrevious;
-        
-        /// <summary>
-        /// btnSearch control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadButton btnSearch;
-        
-        /// <summary>
-        /// btnEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadButton btnEdit;
-        
+
         /// <summary>
         /// btnDelete control.
         /// </summary>
@@ -443,7 +355,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnDelete;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -452,7 +364,7 @@ namespace MAANBDERP.Forms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadButton btnCancel;
-        
+
         /// <summary>
         /// btnPreview control.
         /// </summary>

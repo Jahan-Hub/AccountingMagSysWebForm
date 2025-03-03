@@ -1,22 +1,16 @@
 ﻿using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
-using MAANBDERP;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using Telerik.Web.UI;
 
-namespace MAANBDERP.Forms
+namespace AccountingManagementSystem.Forms
 {
     public partial class accCreditVoucher : System.Web.UI.Page
     {
-        MAANBDERPEntities db = new MAANBDERPEntities();
         SqlConnection con;
         SqlCommand cmd;
         public DataTable dtDebitCredit
@@ -45,19 +39,12 @@ namespace MAANBDERP.Forms
                 return dtDebitCredit;
             }
         }
-        public void EnableControl(bool ec)
-        {
-
-        }
         public void ButtonControl(string bc)
         {
-            //// Which button you click control according by button
             if (bc == "L")
             {
                 btnNew.Enabled = true;
                 btnSave.Enabled = false;
-                btnSearch.Enabled = true;
-                btnEdit.Enabled = false;
                 btnCancel.Enabled = false;
                 lblMessage.Text = "";
             }
@@ -65,28 +52,14 @@ namespace MAANBDERP.Forms
             {
                 btnNew.Enabled = true;
                 btnSave.Enabled = true;
-                btnSearch.Enabled = false;
-                btnEdit.Enabled = false;
                 btnCancel.Enabled = true;
                 lblMessage.Text = "";
                 lblOperationMode.Text = "Save Mode";
             }
-            //else if (bc == "S")
-            //{
-            //    btnNew.Enabled = false;
-            //    btnSave.Enabled = false;
-            //    btnEdit.Enabled = false;
-            //    btnCancel.Enabled = false;
-            //    lblOperationMode.Text = "";
-            //    lblMessage.Text = "";
-
-            //}
             else if (bc == "F")
             {
                 btnNew.Enabled = false;
                 btnSave.Enabled = false;
-                btnSearch.Enabled = true;
-                btnEdit.Enabled = true;
                 btnCancel.Enabled = true;
                 lblMessage.Text = "";
             }
@@ -94,22 +67,10 @@ namespace MAANBDERP.Forms
             {
                 btnNew.Enabled = false;
                 btnSave.Enabled = true;
-                btnEdit.Enabled = false;
-                btnEdit.Enabled = false;
                 btnCancel.Enabled = true;
                 lblMessage.Text = "";
                 lblOperationMode.Text = "Edit Mode";
             }
-
-            //else if (bc == "C")
-            //{
-            //    btnNew.Enabled = true;
-            //    btnSave.Enabled = false;
-            //    btnEdit.Enabled = false;
-            //    btnCancel.Enabled = false;
-            //    lblOperationMode.Text = "";
-            //    lblMessage.Text = "";
-            //}
         }
         public void ClearCredit()
         {
@@ -117,37 +78,16 @@ namespace MAANBDERP.Forms
             cmCredit.SelectedValue = "";
             txtCreditCode.Text = "";
             txtCreditAmount.Text = "0.00";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = AppEnv.Current.p_UserName.ToString();
-            cmSalesMan.SelectedValue = AppEnv.Current.p_UserEmployeeID.ToString();
         }
         public void ClearControl()
         {
             txtCheckNo.Text = "";
             txtCreditAmount.Text = "0.00";
-            //txtCreditCode.Text = "";
             txtDebitAmount.Text = "0.00";
-            //txtDebitCodeParticular.Text = "";
             txtNarattion.Text = "";
             txtTotalCredit.Text = "";
             txtTotalDebit.Text = "";
             txtTrackingID.Value = "0";
-            //txtVoucherNo.Text = "";
-            //cmCredit.Text = "";
-            //cmCredit.SelectedValue = "";
-            //cmDebit.Text = "";
-            //cmDebit.SelectedValue = "";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = AppEnv.Current.p_UserName.ToString();
-            cmSalesMan.SelectedValue = AppEnv.Current.p_UserEmployeeID.ToString();
-            //dtDebitCredit.Clear();
-            //RadGrid1.Rebind();
         }
         public void ClearControlAll()
         {
@@ -160,17 +100,10 @@ namespace MAANBDERP.Forms
             txtTotalCredit.Text = "";
             txtTotalDebit.Text = "";
             txtTrackingID.Value = "0";
-            //txtVoucherNo.Text = "";
             cmCredit.Text = "";
             cmCredit.SelectedValue = "";
             cmDebit.Text = "";
             cmDebit.SelectedValue = "";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = AppEnv.Current.p_UserName.ToString();
-            cmSalesMan.SelectedValue = AppEnv.Current.p_UserEmployeeID.ToString();
             dtDebitCredit.Clear();
             RadGrid1.Rebind();
         }
@@ -181,34 +114,16 @@ namespace MAANBDERP.Forms
             txtCreditAmount.Text = "0.00";
             txtNarattion.Text = "";
             txtCreditCode.Text = "";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = AppEnv.Current.p_UserName.ToString();
-            cmSalesMan.SelectedValue = AppEnv.Current.p_UserEmployeeID.ToString();
         }
         public string GetAutoNumber(string fieldName, string tableName, string WhereCondition, string ControlName)
         {
-            //try
-            //{
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             string ss = "Select  isnull(Max(convert(int," + fieldName + ")),0) from " + tableName + " where " + WhereCondition + " = '" + ControlName + "'";
             SqlCommand cmd = new SqlCommand(ss, con);
 
             con.Open();
             Int32 x = (Int32)cmd.ExecuteScalar();
-            //Int32 r = Convert.ToInt32(x + 1);
             return x.ToString();
-            //}
-            //catch (Exception)
-            //{
-            //    return "1";
-            //}
-            //finally
-            //{
-            //    con.Close();
-            //}
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -231,12 +146,11 @@ namespace MAANBDERP.Forms
                 txtVoucherNo.Text = (max + 1).ToString();
                 ButtonControl("N");
                 dpVouDate.Focus();
-                //ClearCredit();
             }
         }
         protected void btnNew_Click(object sender, EventArgs e)
         {
-            if(cmVoucherType.SelectedValue=="")
+            if (cmVoucherType.SelectedValue == "")
             {
                 lblMessage.Text = "Select Voucher Type";
             }
@@ -288,7 +202,7 @@ namespace MAANBDERP.Forms
                 }
                 else
                 {
-                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                     con.Open();
 
                     cmd = new SqlCommand("Pro_Save_TempVou_Acc", con);
@@ -303,35 +217,10 @@ namespace MAANBDERP.Forms
                     cmd.Parameters.Add("@cr_amt", SqlDbType.Decimal).Value = Convert.ToDecimal(txtCreditAmount.Text);
                     cmd.Parameters.Add("@vou_type", SqlDbType.NVarChar).Value = cmVoucherType.SelectedValue;
                     cmd.Parameters.Add("@vou_chq", SqlDbType.NVarChar).Value = txtCheckNo.Text;
-                    if (cmProjectName.Text != "")
-                    {
-                        cmd.Parameters.Add("@OfficeName", SqlDbType.NVarChar).Value = cmProjectName.Text;
-                    }
-                    else
-                    {
-                        cmd.Parameters.Add("@OfficeName", SqlDbType.NVarChar).Value = "Dhaka";
-                    }
-                    if (cmDepartment.SelectedValue != "")
-                    {
-                        cmd.Parameters.Add("@Department", SqlDbType.NVarChar).Value = cmDepartment.SelectedValue;
-                    }
-                    else
-                    {
-                        cmd.Parameters.Add("@Department", SqlDbType.NVarChar).Value = "10";
-                    }
-                    if (cmSalesMan.SelectedValue != "")
-                    {
-                        cmd.Parameters.Add("@salesmancode", SqlDbType.Int).Value = cmSalesMan.SelectedValue;
-                    }
-                    else
-                    {
-                        cmd.Parameters.Add("@salesmancode", SqlDbType.Int).Value = "1010001";
-                    }
+
                     cmd.Parameters.Add("@track_id", SqlDbType.Int).Value = txtTrackingID.Value;
                     cmd.Parameters.Add("@uid", SqlDbType.NVarChar).Value = AppEnv.Current.p_UserName.ToString();
                     cmd.ExecuteNonQuery();
-                    //ClearControl();
-                    //ClearCredit();
                     ButtonControl("N");
                     lblMessage.Text = "Data Saved Successfully...";
                     con.Close();
@@ -349,7 +238,7 @@ namespace MAANBDERP.Forms
         }
         public void GridReloadOnly()
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("flush_vou", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -387,23 +276,7 @@ namespace MAANBDERP.Forms
             }
             RadGrid1.Rebind();
 
-            //cmProjectName.SelectedValue = dt1.Rows[0]["prj_code"].ToString();
-            //cmDepartment.SelectedValue = dt1.Rows[0]["DeptId"].ToString();
-            //cmDepartment.Text = dt1.Rows[0]["DName"].ToString();
-            //cmSalesMan.SelectedValue = dt1.Rows[0]["salesmancode"].ToString();
-            //cmSalesMan.Text = dt1.Rows[0]["SMName"].ToString();
-            //dpVouDate.SelectedDate = Convert.ToDateTime(dt1.Rows[0]["vou_date"].ToString());
-            //txtTrackingID.Value = dt1.Rows[0]["track_id"].ToString();
-
             lblMessage.Text = "";
-        }
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-        protected void btnEdit_Click(object sender, EventArgs e)
-        {
-
         }
         protected void btnCancel_Click(object sender, EventArgs e)
         {
@@ -422,7 +295,7 @@ namespace MAANBDERP.Forms
                 txtVoucherNo.Text = (max + 1).ToString();
                 dpVouDate.SelectedDate = DateTime.Now;
                 ButtonControl("N");
-               
+
                 ClearControlAll();
                 dtDebitCredit.Clear();
                 RadGrid1.Rebind();
@@ -449,95 +322,11 @@ namespace MAANBDERP.Forms
                 lblMessage.Text = ex.Message;
             }
         }
-        protected void btnAddDebit_Click(object sender, EventArgs e)
-        {
-
-        }
-        protected void cmProjectName_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select distinct OfficeName from AreaInfo", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["OfficeName"];
-                    item.Value = dataRow["OfficeName"].ToString();
-                    cmProjectName.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
-        protected void cmDepartment_ItemsRequested(object sender, Telerik.Web.UI.RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select * from tblDepartmentGRL", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["Name"];
-                    item.Value = dataRow["Code"].ToString();
-                    cmDepartment.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
-        protected void cmSalesMan_ItemsRequested(object sender, Telerik.Web.UI.RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select EmployeeID,EmployeeName from EmployeeInfo", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["EmployeeName"];
-                    item.Value = dataRow["EmployeeID"].ToString();
-                    cmSalesMan.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
         protected void txtVoucherNo_TextChanged(object sender, EventArgs e)
         {
-
             try
             {
-
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                 con.Open();
                 cmd = new SqlCommand("flush_vou", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -556,7 +345,6 @@ namespace MAANBDERP.Forms
                 ClearControlPartial();
 
                 dpVouDate.SelectedDate = Convert.ToDateTime(dt1.Rows[0]["vou_date"].ToString());
-
 
                 for (int i = 0; i < dt1.Rows.Count; i++)
                 {
@@ -587,37 +375,20 @@ namespace MAANBDERP.Forms
             }
             catch (Exception ex)
             {
-                //txtVoucherNo.Text = (Convert.ToInt32(txtVoucherNo.Text) - 1).ToString();
                 lblMessage.Text = ex.Message;
             }
 
             dpVouDate.Focus();
-
-            //if(cmVoucherType.SelectedValue=="")
-            //{
-            //    lblMessage.Text = "Select Voucher Type.";
-            //}
-            //else
-            //{
-            //    GridReloadOnly();
-            //    ButtonControl("E");
-            //}
         }
         protected void cmCredit_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
             txtCreditCode.Text = cmCredit.SelectedValue;
             txtCreditAmount.Text = "0.00";
-            cmDepartment.Text = "Head Office";
-            cmDepartment.SelectedValue = "10";
-            cmProjectName.Text = "Dhaka";
-            cmProjectName.SelectedValue = "Dhaka";
-            cmSalesMan.Text = AppEnv.Current.p_UserName.ToString();
-            cmSalesMan.SelectedValue = AppEnv.Current.p_UserEmployeeID.ToString();
             txtCreditAmount.Focus();
         }
         protected void cmDebit_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("ComboLoadDataForAll", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -646,57 +417,15 @@ namespace MAANBDERP.Forms
                 cmDebit.Items.Add(item);
                 item.DataBind();
             }
-            
-            
-            //try
-            //{
-            //    con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-            //    con.Open();
-            //    cmd = new SqlCommand("select * from acct where acc_status='T' order by acc_name", con);
-            //    cmd.CommandType = CommandType.Text;
-            //    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            //    DataTable dt = new DataTable();
-            //    adapter.Fill(dt);
-            //    foreach (DataRow dataRow in dt.Rows)
-            //    {
-            //        RadComboBoxItem item = new RadComboBoxItem();
-            //        item.Text = (string)dataRow["acc_name"].ToString();
-            //        item.Value = dataRow["acc_code"].ToString();
-
-            //        string code = (string)dataRow["acc_code"].ToString();
-            //        string descr = (string)dataRow["acc_name"].ToString();
-
-            //        item.Attributes.Add("acc_code", code.ToString());
-            //        item.Attributes.Add("acc_name", descr.ToString());
-
-            //        cmDebit.Items.Add(item);
-            //        item.DataBind();
-            //    }
-            //    con.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    lblMessage.Text = ex.Message;
-            //}
         }
         protected void cmDebit_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
             txtDebitCodeParticular.Text = cmDebit.SelectedValue;
-
-
-            //if (cmVoucherType.SelectedValue == "CR")
-            //{
-            //    cmDebit.Focus();
-            //}
-            //else
-            //{
-            //    txtCheckNo.Focus();
-            //}
             cmCredit.Focus();
         }
         protected void cmCredit_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("ComboLoadDataForAll", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -725,37 +454,6 @@ namespace MAANBDERP.Forms
                 cmCredit.Items.Add(item);
                 item.DataBind();
             }
-            
-            //try
-            //{
-            //    con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-            //    con.Open();
-            //    cmd = new SqlCommand("select * from acct where acc_status='T' and acc_head like '11%' order by acc_name", con);
-            //    cmd.CommandType = CommandType.Text;
-            //    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            //    DataTable dt = new DataTable();
-            //    adapter.Fill(dt);
-            //    foreach (DataRow dataRow in dt.Rows)
-            //    {
-            //        RadComboBoxItem item = new RadComboBoxItem();
-            //        item.Text = (string)dataRow["acc_name"].ToString();
-            //        item.Value = dataRow["acc_code"].ToString();
-
-            //        string code = (string)dataRow["acc_code"].ToString();
-            //        string descr = (string)dataRow["acc_name"].ToString();
-
-            //        item.Attributes.Add("acc_code", code.ToString());
-            //        item.Attributes.Add("acc_name", descr.ToString());
-
-            //        cmCredit.Items.Add(item);
-            //        item.DataBind();
-            //    }
-            //    con.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    lblMessage.Text = ex.Message;
-            //}
         }
         protected void rbtDeleteGrid_Click(object sender, ImageClickEventArgs e)
         {
@@ -771,27 +469,24 @@ namespace MAANBDERP.Forms
             {
                 GridDataItem item = (GridDataItem)e.Item;
                 int RID = Convert.ToInt32(item["track_id"].Text);
-                //DataRow[] Drow = this.dtDebitCredit.Select("track_id='" + RID + "'");
-                //if (Drow.Length > 0)
-                //{
-                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-                    con.Open();
 
-                    cmd = new SqlCommand("[pro_delete_tempvou]", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add("@mode", SqlDbType.NVarChar).Value = 1;
-                    cmd.Parameters.Add("@vou_no", SqlDbType.NVarChar).Value = txtVoucherNo.Text;
-                    cmd.Parameters.Add("@vou_type", SqlDbType.NVarChar).Value = cmVoucherType.SelectedValue;
-                    cmd.Parameters.Add("@track_id", SqlDbType.Int).Value = RID;
-                    cmd.ExecuteNonQuery();
-                    ClearControl();
-                    ClearCredit();
-                    ButtonControl("N");
-                    lblMessage.Text = "Data Saved Successfully...";
-                    con.Close();
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
+                con.Open();
 
-                    GridReloadOnly();
-                //}
+                cmd = new SqlCommand("[pro_delete_tempvou]", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@mode", SqlDbType.NVarChar).Value = 1;
+                cmd.Parameters.Add("@vou_no", SqlDbType.NVarChar).Value = txtVoucherNo.Text;
+                cmd.Parameters.Add("@vou_type", SqlDbType.NVarChar).Value = cmVoucherType.SelectedValue;
+                cmd.Parameters.Add("@track_id", SqlDbType.Int).Value = RID;
+                cmd.ExecuteNonQuery();
+                ClearControl();
+                ClearCredit();
+                ButtonControl("N");
+                lblMessage.Text = "Data Saved Successfully...";
+                con.Close();
+
+                GridReloadOnly();
             }
         }
         protected void RadGrid1_SelectedIndexChanged(object sender, EventArgs e)
@@ -827,7 +522,6 @@ namespace MAANBDERP.Forms
                 {
                     GridDataItem dataItem = e.Item as GridDataItem;
                     sumDebitAmount += Convert.ToDecimal(dataItem["Debit"].Text);
-                    //sumCreditAmount += Convert.ToDecimal(dataItem["Debit"].Text);
                     ViewState["sumDebitAmount"] = sumDebitAmount;
                     txtTotalCredit.Text = sumDebitAmount.ToString();
                     txtTotalDebit.Text = sumDebitAmount.ToString();
@@ -836,7 +530,6 @@ namespace MAANBDERP.Forms
                 {
                     GridFooterItem footerItem = e.Item as GridFooterItem;
                     footerItem["Debit"].Text = sumDebitAmount.ToString();
-                    //footerItem["Credit"].Text = sumCreditAmount.ToString();
                     footerItem["Particulars"].Text = "Total : ";
                     footerItem.BackColor = System.Drawing.Color.LightGray;
                 }
@@ -850,7 +543,7 @@ namespace MAANBDERP.Forms
         {
             try
             {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                 con.Open();
                 cmd = new SqlCommand("PostingInLedger_AC", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -859,11 +552,8 @@ namespace MAANBDERP.Forms
                 cmd.ExecuteNonQuery();
                 con.Close();
 
-                //int max = Convert.ToInt32(GetAutoNumber("vou_no", "vou", "vou_type", cmVoucherType.SelectedValue));
-                //txtVoucherNo.Text = (max + 1).ToString();
                 ClearControlAll();
                 GridReloadOnly();
-                //ClearControl();
                 dpVouDate.SelectedDate = DateTime.Now;
             }
             catch (Exception ex)
@@ -891,7 +581,7 @@ namespace MAANBDERP.Forms
                     {
                         dtDebitCredit.Clear();
 
-                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                         con.Open();
                         cmd = new SqlCommand("flush_vou", con);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -925,7 +615,7 @@ namespace MAANBDERP.Forms
                             this.dtDebitCredit.Rows.Add(newRow);
                             this.dtDebitCredit.AcceptChanges();
 
-                            if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0) // for getting credit data
+                            if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0)
                             {
                                 cmDebit.SelectedValue = dt1.Rows[i]["acc_code"].ToString();
                                 cmDebit.Text = dt1.Rows[i]["acc_nam"].ToString();
@@ -934,13 +624,6 @@ namespace MAANBDERP.Forms
                             }
                         }
                         RadGrid1.Rebind();
-                       
-                        //cmProjectName.SelectedValue = dt1.Rows[0]["prj_code"].ToString();
-                        //cmDepartment.SelectedValue = dt1.Rows[0]["DeptId"].ToString();
-                        //cmDepartment.Text = dt1.Rows[0]["DName"].ToString();
-                        //cmSalesMan.SelectedValue = dt1.Rows[0]["salesmancode"].ToString();
-                        //cmSalesMan.Text = dt1.Rows[0]["SMName"].ToString();
-                        //dpVouDate.SelectedDate = Convert.ToDateTime(dt1.Rows[0]["vou_date"].ToString());
 
                         lblMessage.Text = "";
                     }
@@ -948,7 +631,6 @@ namespace MAANBDERP.Forms
             }
             catch (Exception ex)
             {
-                //txtVoucherNo.Text = (Convert.ToInt32(txtVoucherNo.Text) - 1).ToString();
                 lblMessage.Text = ex.Message;
             }
         }
@@ -968,7 +650,7 @@ namespace MAANBDERP.Forms
                     }
                     else
                     {
-                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+                        con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
                         con.Open();
                         cmd = new SqlCommand("flush_vou", con);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -1017,27 +699,24 @@ namespace MAANBDERP.Forms
             }
             catch (Exception ex)
             {
-                //txtVoucherNo.Text = (Convert.ToInt32(txtVoucherNo.Text) - 1).ToString();
                 lblMessage.Text = ex.Message;
             }
         }
         protected void btnPreview_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             con.Open();
-            if (MAANBDERP.AppEnv.Current.p_rptSource != null)
+            if (AppEnv.Current.p_rptSource != null)
             {
-                MAANBDERP.AppEnv.Current.p_rptSource.Close();
-                MAANBDERP.AppEnv.Current.p_rptSource.Dispose();
+                AppEnv.Current.p_rptSource.Close();
+                AppEnv.Current.p_rptSource.Dispose();
             }
-            MAANBDERP.AppEnv.Current.p_rptSource = new ReportDocument();
+            AppEnv.Current.p_rptSource = new ReportDocument();
             cmd = new SqlCommand("ReportManager_AC", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 6;
             cmd.Parameters.Add("@vou_no", SqlDbType.VarChar).Value = txtVoucherNo.Text;
             cmd.Parameters.Add("@vou_type", SqlDbType.VarChar).Value = cmVoucherType.SelectedValue;
-            //cmd.Parameters.Add("@var1", SqlDbType.VarChar).Value = txtVoucherNo.Text;
-            //cmd.Parameters.Add("@var2", SqlDbType.VarChar).Value = cmVoucherType.SelectedValue;
 
             SqlDataAdapter Dap = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
@@ -1046,10 +725,10 @@ namespace MAANBDERP.Forms
             string tempPath = "";
             string reportName = "";
             reportName = "VoucherPrint";
-            MAANBDERP.AppEnv.Current.p_rptObject = "~/Reports/Accounts/VoucherPrintCredit.rpt";
+            AppEnv.Current.p_rptObject = "~/Reports/Accounts/VoucherPrintCredit.rpt";
             tempPath = @System.IO.Path.GetTempPath() + "VoucherPrint";
-            MAANBDERP.AppEnv.Current.p_rptSource.Load(Server.MapPath(MAANBDERP.AppEnv.Current.p_rptObject.ToString()));
-            MAANBDERP.AppEnv.Current.p_rptSource.SetDataSource(dt);
+            AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
+            AppEnv.Current.p_rptSource.SetDataSource(dt);
             con.Close();
 
             if (dt.Rows.Count > 0)
@@ -1057,18 +736,15 @@ namespace MAANBDERP.Forms
                 Response.Buffer = false;
                 Response.ClearContent();
                 Response.ClearHeaders();
-                //((TextObject)MAANBDERP.AppEnv.Current.p_rptSource.ReportDefinition.Sections["Section1"].ReportObjects["txtReportType"]).Text = cmReportType.Text;
-                //((TextObject)MAANBDERP.AppEnv.Current.p_rptSource.ReportDefinition.Sections["Section1"].ReportObjects["txtStartDate"]).Text = dpStartDate.SelectedDate.Value.ToShortDateString();
-                //((TextObject)MAANBDERP.AppEnv.Current.p_rptSource.ReportDefinition.Sections["Section1"].ReportObjects["txtEndDate"]).Text = dpEndDate.SelectedDate.Value.ToShortDateString();
                 ExportFormatType format = ExportFormatType.PortableDocFormat;
                 try
                 {
-                    MAANBDERP.AppEnv.Current.p_rptSource.ExportToHttpResponse(format, Response, true, reportName);
+                    AppEnv.Current.p_rptSource.ExportToHttpResponse(format, Response, true, reportName);
                 }
                 finally
                 {
-                    MAANBDERP.AppEnv.Current.p_rptSource.Close();
-                    MAANBDERP.AppEnv.Current.p_rptSource.Dispose();
+                    AppEnv.Current.p_rptSource.Close();
+                    AppEnv.Current.p_rptSource.Dispose();
                     GC.Collect();
                 }
             }
@@ -1076,15 +752,10 @@ namespace MAANBDERP.Forms
             {
                 lblMessage.Text = "Data is not available.";
             }
-            //}
-            //catch (Exception ex)
-            //{
-            //    lblMessage.Text = ex.Message;
-            //}
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
+            con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
             con.Open();
             cmd = new SqlCommand("[DeleteVou]", con);
             cmd.CommandType = CommandType.StoredProcedure;
@@ -1102,67 +773,6 @@ namespace MAANBDERP.Forms
             con.Close();
             RadGrid1.Rebind();
         }
-
-        protected void cmCustCode_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
-        {
-            //try
-            //{
-            //    con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-            //    con.Open();
-            //    cmd = new SqlCommand("select Acc_code,Acc_Name from acct where Acc_head='1103'", con);
-            //    cmd.CommandType = CommandType.Text;
-            //    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            //    DataTable dt = new DataTable();
-            //    adapter.Fill(dt);
-            //    foreach (DataRow dataRow in dt.Rows)
-            //    {
-            //        RadComboBoxItem item = new RadComboBoxItem();
-            //        item.Text = (string)dataRow["Acc_Name"];
-            //        item.Value = dataRow["Acc_code"].ToString();
-            //        cmCustCode.Items.Add(item);
-            //        item.DataBind();
-            //    }
-            //    con.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    lblMessage.Text = ex.Message;
-            //}
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["MAANBDERPConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("ComboLoadDataForAll", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@Mode", SqlDbType.Int).Value = 17;
-                //cmd.Parameters.Add("@SearchFld", SqlDbType.VarChar).Value = e.Text;
-                cmd.Parameters.Add("@SearchText", SqlDbType.VarChar).Value = e.Text;
-                cmd.Parameters.Add("@OrderByFld", SqlDbType.VarChar).Value = cmCustCode.Text;
-                cmd.Parameters.Add("@StartNo", SqlDbType.Int).Value = 0;
-                cmd.Parameters.Add("@EndNo", SqlDbType.Int).Value = 20;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataSet ds = new DataSet();
-                DataTable dt = new DataTable();
-                adapter.Fill(ds);
-                dt = ds.Tables[1];
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["acc_name"].ToString();
-                    item.Value = dataRow["acc_code"].ToString();
-                    cmCustCode.Items.Add(item);
-                    item.DataBind();
-                }
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
-        protected void cmCustCode_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
-        {
-
-        }
         protected void txtDebitAmount_TextChanged(object sender, EventArgs e)
         {
             txtNarattion.Focus();
@@ -1175,7 +785,5 @@ namespace MAANBDERP.Forms
         {
             btnSave.Focus();
         }
-
-
     }
 }
