@@ -92,7 +92,7 @@
                     <td class="auto-style2" colspan="4">
                         <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click">
                         </telerik:RadButton>
-                        <telerik:RadButton ID="btnPreview" runat="server" OnClick="btnPreview_Click" TabIndex="23" Text="Print Preview">
+                        <telerik:RadButton ID="btnPreview" runat="server" OnClick="btnPreview_Click" TabIndex="23" Text="Print Chart of Account">
                         </telerik:RadButton>
                     </td>
                 </tr>
