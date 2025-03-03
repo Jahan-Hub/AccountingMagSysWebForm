@@ -102,23 +102,23 @@ namespace AccountingManagementSystem
             }
             if (s == "Chart Of Accounts")
             {
-                LoadIFrame("Forms/accChartOfAccounts.aspx");
+                LoadIFrame("Forms/ChartOfAccounts.aspx");
             }
             if (s == "Debit Voucher")
             {
-                LoadIFrame("Forms/accDebitVoucher.aspx");
+                LoadIFrame("Forms/DebitVoucher.aspx");
             }
             if (s == "Credit Voucher")
             {
-                LoadIFrame("Forms/accCreditVoucher.aspx");
+                LoadIFrame("Forms/CreditVoucher.aspx");
             }
             if (s == "Journal Voucher")
             {
-                LoadIFrame("Forms/accJournalVoucher.aspx");
+                LoadIFrame("Forms/JournalVoucher.aspx");
             }
             if (s == "Opening Balance")
             {
-                LoadIFrame("Forms/AccOpeningBalance.aspx");
+                LoadIFrame("Forms/OpeningBalance.aspx");
             }
             if (s == "Transaction Entry")
             {

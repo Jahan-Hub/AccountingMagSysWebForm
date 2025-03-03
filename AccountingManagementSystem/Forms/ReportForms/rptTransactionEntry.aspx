@@ -26,12 +26,28 @@
             <table style="width: 40%">
                 <tr>
                     <td class="auto-style7">
+                        <asp:Label ID="Label25" runat="server" Text="Report Type"></asp:Label>
+                    </td>
+                    <td>
+                        <telerik:RadComboBox ID="cmReportType" runat="server" Width="100%">
+                            <Items>
+                                <telerik:RadComboBoxItem runat="server" Text="Voucher Register" Value="Voucher Register" />
+                                <telerik:RadComboBoxItem runat="server" Text="General Ledger" Value="General Ledger" />
+                                <telerik:RadComboBoxItem runat="server" Text="Income Statement" Value="Income Statement" />
+                                <telerik:RadComboBoxItem runat="server" Text="Trial Balance" Value="Trial Balance" />
+                                <telerik:RadComboBoxItem runat="server" Text="Balance Sheet" Value="Balance Sheet" />
+                            </Items>
+                        </telerik:RadComboBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style7">
                         <asp:Label ID="Label24" runat="server" Text="Voucher Type"></asp:Label>
                     </td>
                     <td>
                         <telerik:RadComboBox ID="cmVoucherType" runat="server" Width="100%" EmptyMessage="Select">
                             <Items>
-                                <telerik:RadComboBoxItem runat="server" Text="CP" Value="CP" />
+                                <telerik:RadComboBoxItem runat="server" Text="CP(Cash Payment)" Value="CP(Cash Payment)" />
                                 <telerik:RadComboBoxItem runat="server" Text="BP" Value="BP" />
                                 <telerik:RadComboBoxItem runat="server" Text="CR" Value="CR" />
                                 <telerik:RadComboBoxItem runat="server" Text="BR" Value="BR" />
@@ -42,19 +58,9 @@
                 </tr>
                 <tr>
                     <td class="auto-style7">
-                        <asp:Label ID="Label25" runat="server" Text="Report Type"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                     <td>
-                        <telerik:RadComboBox ID="cmReportType" runat="server" Width="100%">
-                            <Items>
-                                <telerik:RadComboBoxItem runat="server" Text="Trial Balance" Value="Trial Balance" />
-                                <telerik:RadComboBoxItem runat="server" Text="General Ledger" Value="General Ledger" />
-                                <telerik:RadComboBoxItem runat="server" Text="Balance Sheet" Value="Balance Sheet" />
-                                <telerik:RadComboBoxItem runat="server" Text="Income Statement" Value="Income Statement" />
-                                <telerik:RadComboBoxItem runat="server" Text="Export" Value="Export" />
-                            </Items>
-                        </telerik:RadComboBox>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style7">

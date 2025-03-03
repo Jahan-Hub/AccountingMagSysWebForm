@@ -108,12 +108,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Forms\accChartOfAccounts.aspx" />
-    <Content Include="Forms\accCreditVoucher.aspx" />
-    <Content Include="Forms\accDebitVoucher.aspx" />
-    <Content Include="Forms\accJournalVoucher.aspx" />
-    <Content Include="Forms\AccOpeningBalance.aspx" />
+    <Content Include="Forms\ChartOfAccounts.aspx" />
     <Content Include="Forms\CompanyInfo.aspx" />
+    <Content Include="Forms\CreditVoucher.aspx" />
+    <Content Include="Forms\DebitVoucher.aspx" />
+    <Content Include="Forms\JournalVoucher.aspx" />
+    <Content Include="Forms\OpeningBalance.aspx" />
+    <Content Include="Forms\ReportForms\ReportMgrAcc.aspx" />
     <Content Include="Forms\ReportForms\rptChartOfAccount.aspx" />
     <Content Include="Forms\ReportForms\rptTransactionEntry.aspx" />
     <Content Include="Forms\Dashboard.aspx" />
@@ -179,40 +180,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetSMS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Forms\accChartOfAccounts.aspx.cs">
-      <DependentUpon>accChartOfAccounts.aspx</DependentUpon>
+    <Compile Include="Forms\ChartOfAccounts.aspx.cs">
+      <DependentUpon>ChartOfAccounts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Forms\accChartOfAccounts.aspx.designer.cs">
-      <DependentUpon>accChartOfAccounts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\accCreditVoucher.aspx.cs">
-      <DependentUpon>accCreditVoucher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\accCreditVoucher.aspx.designer.cs">
-      <DependentUpon>accCreditVoucher.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\accDebitVoucher.aspx.cs">
-      <DependentUpon>accDebitVoucher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\accDebitVoucher.aspx.designer.cs">
-      <DependentUpon>accDebitVoucher.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\accJournalVoucher.aspx.cs">
-      <DependentUpon>accJournalVoucher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\accJournalVoucher.aspx.designer.cs">
-      <DependentUpon>accJournalVoucher.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\AccOpeningBalance.aspx.cs">
-      <DependentUpon>AccOpeningBalance.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\AccOpeningBalance.aspx.designer.cs">
-      <DependentUpon>AccOpeningBalance.aspx</DependentUpon>
+    <Compile Include="Forms\ChartOfAccounts.aspx.designer.cs">
+      <DependentUpon>ChartOfAccounts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\CompanyInfo.aspx.cs">
       <DependentUpon>CompanyInfo.aspx</DependentUpon>
@@ -220,6 +193,41 @@
     </Compile>
     <Compile Include="Forms\CompanyInfo.aspx.designer.cs">
       <DependentUpon>CompanyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreditVoucher.aspx.cs">
+      <DependentUpon>CreditVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CreditVoucher.aspx.designer.cs">
+      <DependentUpon>CreditVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DebitVoucher.aspx.cs">
+      <DependentUpon>DebitVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DebitVoucher.aspx.designer.cs">
+      <DependentUpon>DebitVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JournalVoucher.aspx.cs">
+      <DependentUpon>JournalVoucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JournalVoucher.aspx.designer.cs">
+      <DependentUpon>JournalVoucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OpeningBalance.aspx.cs">
+      <DependentUpon>OpeningBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\OpeningBalance.aspx.designer.cs">
+      <DependentUpon>OpeningBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportMgrAcc.aspx.cs">
+      <DependentUpon>ReportMgrAcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ReportForms\ReportMgrAcc.aspx.designer.cs">
+      <DependentUpon>ReportMgrAcc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Forms\ReportForms\rptChartOfAccount.aspx.cs">
       <DependentUpon>rptChartOfAccount.aspx</DependentUpon>

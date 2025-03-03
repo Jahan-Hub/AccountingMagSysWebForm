@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AccountingManagementSystem.Forms.ReportForms
+namespace AccountingManagementSystem.Forms
 {
 
 
-    public partial class rptTransactionEntry
+    public partial class ChartOfAccounts
     {
 
         /// <summary>
@@ -33,40 +33,31 @@ namespace AccountingManagementSystem.Forms.ReportForms
         protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
 
         /// <summary>
-        /// Label25 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label25;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// cmReportType control.
+        /// cmAccType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cmReportType;
+        protected global::Telerik.Web.UI.RadComboBox cmAccType;
 
         /// <summary>
-        /// Label24 control.
+        /// dsMG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label24;
-
-        /// <summary>
-        /// cmVoucherType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cmVoucherType;
+        protected global::System.Web.UI.WebControls.SqlDataSource dsMG;
 
         /// <summary>
         /// Label7 control.
@@ -78,49 +69,94 @@ namespace AccountingManagementSystem.Forms.ReportForms
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// txtVoucherNo control.
+        /// cmSubType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadNumericTextBox txtVoucherNo;
+        protected global::Telerik.Web.UI.RadComboBox cmSubType;
 
         /// <summary>
-        /// Label26 control.
+        /// dsSG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label26;
+        protected global::System.Web.UI.WebControls.SqlDataSource dsSG;
 
         /// <summary>
-        /// rbtnPdf control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnPdf;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// rbtnExcel control.
+        /// cmMainLedger control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnExcel;
+        protected global::Telerik.Web.UI.RadComboBox cmMainLedger;
 
         /// <summary>
-        /// btnGenerateReport control.
+        /// dsML control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadButton btnGenerateReport;
+        protected global::System.Web.UI.WebControls.SqlDataSource dsML;
+
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// txtAccountHeadCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txtAccountHeadCode;
+
+        /// <summary>
+        /// txtAccountsHead control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txtAccountsHead;
+
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadButton btnSave;
+
+        /// <summary>
+        /// btnPreview control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadButton btnPreview;
 
         /// <summary>
         /// lblMessage control.
@@ -130,5 +166,14 @@ namespace AccountingManagementSystem.Forms.ReportForms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
+
+        /// <summary>
+        /// rgMain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadGrid rgMain;
     }
 }

@@ -54,6 +54,11 @@ namespace AccountingManagementSystem.Forms.ReportForms
                     AppEnv.Current.p_rptObject = "~/Reports/BankPayment.rpt";
                     reportName = "Bank Payment";
                 }
+                else if(cmReportType.SelectedValue == "BP")
+                {
+                    AppEnv.Current.p_rptObject = "~/Reports/BankPayment.rpt";
+                    reportName = "Bank Payment";
+                }
                 else if(cmReportType.SelectedValue == "CR")
                 {
                     AppEnv.Current.p_rptObject = "~/Reports/CashReceive.rpt";
