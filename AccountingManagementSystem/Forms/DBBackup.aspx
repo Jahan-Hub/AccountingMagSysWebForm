@@ -37,6 +37,7 @@
                         </telerik:RadButton>
                     </td>
                     </td>
+               
                 </tr>
             </table>
         </div>
@@ -45,20 +46,3 @@
     </form>
 </body>
 </html>
-<script>
-    function OnClientClicked(button, args) {
-        if (window.confirm("Are you sure you want to delete?")) {
-            button.set_autoPostBack(true);
-        }
-        else {
-            button.set_autoPostBack(false);
-        }
-    }
-    <%--function pageLoad() {
-        var grid = $find("<%= rgMain.ClientID %>");
-            var columns = grid.get_masterTableView().get_columns();
-            for (var i = 0; i < columns.length; i++) {
-                columns[i].resizeToFit();
-            }
-        }--%>
-</script>
