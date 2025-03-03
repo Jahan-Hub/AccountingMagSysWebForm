@@ -13,8 +13,7 @@
         .auto-style3 {
             width: 230px;
         }
-
-        </style>
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -65,18 +64,18 @@
                         <asp:Label ID="Label111" runat="server" Text="Account Name"></asp:Label>
                     </td>
                     <td>
-                                <telerik:RadComboBox ID="cmACC_Name" EnableLoadOnDemand="true" DropDownWidth="350px" Filter="Contains" Runat="server" Width="400px" OnItemsRequested="cmACC_Name_ItemsRequested" AutoPostBack="True" OnSelectedIndexChanged="cmACC_Name_SelectedIndexChanged" TabIndex="3">
-                                    <ItemTemplate>
-                                        <table cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td style="font-family: Arial; font-size: 10px;width: 250px;"><%# DataBinder.Eval(Container, "Text")%></td>
-                                                <td style="font-family: Arial; font-size: 10px; width: 100px;"><%# DataBinder.Eval(Container, "Attributes['acc_code']")%></td>
-                                            </tr>
-                                        </table>
-                                    </ItemTemplate>
-                                </telerik:RadComboBox>
-                    <telerik:RadTextBox ID="txtACC_Code" Runat="server" Width="80px" TabIndex="4">
-                    </telerik:RadTextBox>
+                        <telerik:RadComboBox ID="cmACC_Name" EnableLoadOnDemand="true" DropDownWidth="350px" Filter="Contains" runat="server" Width="400px" OnItemsRequested="cmACC_Name_ItemsRequested" AutoPostBack="True" OnSelectedIndexChanged="cmACC_Name_SelectedIndexChanged" TabIndex="3">
+                            <ItemTemplate>
+                                <table cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="font-family: Arial; font-size: 10px; width: 250px;"><%# DataBinder.Eval(Container, "Text")%></td>
+                                        <td style="font-family: Arial; font-size: 10px; width: 100px;"><%# DataBinder.Eval(Container, "Attributes['acc_code']")%></td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </telerik:RadComboBox>
+                        <telerik:RadTextBox ID="txtACC_Code" runat="server" Width="80px" TabIndex="4">
+                        </telerik:RadTextBox>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -160,7 +159,7 @@
                             </DateInput>
 
                             <DatePopupButton ImageUrl="" HoverImageUrl=""></DatePopupButton>
-                        </telerik:RadDatePicker> 
+                        </telerik:RadDatePicker>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

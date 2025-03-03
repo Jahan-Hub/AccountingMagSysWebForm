@@ -23,8 +23,7 @@
                     <td>
                         <asp:Label ID="Label2" runat="server" Text="Opening Date"></asp:Label>
                     </td>
-                    <td>
-                        &nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>
                         <asp:Label ID="Label7" runat="server" Text="Account Code"></asp:Label>
                     </td>
@@ -63,8 +62,7 @@
                             <DatePopupButton ImageUrl="" HoverImageUrl="" TabIndex="2"></DatePopupButton>
                         </telerik:RadDatePicker>
                     </td>
-                    <td>
-                        &nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>
                         <telerik:RadComboBox ID="cmAcctCode" EnableLoadOnDemand="true" DropDownWidth="350px" Filter="Contains" runat="server" OnItemsRequested="cmAcctCode_ItemsRequested" Width="250px" AutoPostBack="True" OnSelectedIndexChanged="cmAcctCode_SelectedIndexChanged" TabIndex="3">
                             <ItemTemplate>
@@ -100,15 +98,12 @@
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td>
-                        &nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>
                         <asp:Label ID="lblOperationMode" runat="server" ForeColor="#CC0066"></asp:Label>
                     </td>
-                    <td>
-                        &nbsp;</td>
-                    <td>
-                        &nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
