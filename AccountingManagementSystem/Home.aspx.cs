@@ -126,14 +126,6 @@ namespace AccountingManagementSystem
             }
 
             ///////////////Reports////////////////
-            if (s == "Report Manager")
-            {
-                LoadIFrame("Forms/ReportForms/ReportManager.aspx");
-            }
-            if (s == "Chart Of Account")
-            {
-                LoadIFrame("Forms/ReportForms/rptChartOfAccount.aspx");
-            }
             if (s == "Transaction Entry")
             {
                 LoadIFrame("Forms/ReportForms/ReportMgrAcc.aspx");

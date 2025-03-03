@@ -68,8 +68,6 @@
 
                     <telerik:RadPanelItem runat="server" Text="Reports" ImageUrl="~/PNG/Preview.png" PostBack="False">
                         <Items>
-                            <telerik:RadPanelItem runat="server" Text="Chart Of Account">
-                            </telerik:RadPanelItem>
                             <telerik:RadPanelItem runat="server" Text="Transaction Entry">
                             </telerik:RadPanelItem>
                         </Items>

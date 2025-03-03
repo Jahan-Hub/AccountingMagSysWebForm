@@ -42,15 +42,6 @@ namespace AccountingManagementSystem.Forms
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Label8 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
-
-        /// <summary>
         /// Label7 control.
         /// </summary>
         /// <remarks>
@@ -58,6 +49,15 @@ namespace AccountingManagementSystem.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
+        /// Label8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
         /// Label3 control.
@@ -87,15 +87,6 @@ namespace AccountingManagementSystem.Forms
         protected global::Telerik.Web.UI.RadDatePicker dpOPDate;
 
         /// <summary>
-        /// cmOfficeName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadComboBox cmOfficeName;
-
-        /// <summary>
         /// cmAcctCode control.
         /// </summary>
         /// <remarks>
@@ -103,6 +94,15 @@ namespace AccountingManagementSystem.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox cmAcctCode;
+
+        /// <summary>
+        /// txtAcctCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox txtAcctCode;
 
         /// <summary>
         /// txtDebitAmt control.
@@ -123,15 +123,6 @@ namespace AccountingManagementSystem.Forms
         protected global::Telerik.Web.UI.RadNumericTextBox txtCreditAmt;
 
         /// <summary>
-        /// dsProject control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsProject;
-
-        /// <summary>
         /// lblOperationMode control.
         /// </summary>
         /// <remarks>
@@ -139,15 +130,6 @@ namespace AccountingManagementSystem.Forms
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblOperationMode;
-
-        /// <summary>
-        /// txtAcctCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox txtAcctCode;
 
         /// <summary>
         /// btnNew control.

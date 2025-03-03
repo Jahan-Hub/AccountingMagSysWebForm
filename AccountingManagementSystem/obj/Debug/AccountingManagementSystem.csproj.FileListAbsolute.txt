@@ -63,6 +63,8 @@ D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSys
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CopyComplete
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.pdb
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll.licenses
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CoreCompileInputs.cache
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\bin\AccountingManagementSystem.dll.config
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\bin\AccountingManagementSystem.dll
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\bin\AccountingManagementSystem.pdb
@@ -88,9 +90,6 @@ D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\bin\stdole.dll
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\bin\EntityFramework.xml
-D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll.licenses
-D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CoreCompileInputs.cache
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CopyComplete
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.pdb
-D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.AssemblyReference.cache

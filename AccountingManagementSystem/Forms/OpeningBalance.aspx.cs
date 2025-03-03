@@ -42,8 +42,6 @@ namespace AccountingManagementSystem.Forms
             cmAcctCode.Text = "";
             cmAcctCode.SelectedValue = "";
             txtAcctCode.Text = "";
-            cmOfficeName.Text = "Dhaka";
-            cmOfficeName.SelectedValue = "Dhaka";
         }
         public void EnableControl(bool b)
         {
@@ -52,8 +50,6 @@ namespace AccountingManagementSystem.Forms
             txtDebitAmt.Enabled = b;
             cmAcctCode.Enabled = b;
             txtAcctCode.Enabled = b;
-            cmOfficeName.Enabled = b;
-            cmOfficeName.Enabled = b;
             dpOPDate.Enabled = b;
         }
         public void ButtonControl(string bc)
@@ -125,8 +121,6 @@ namespace AccountingManagementSystem.Forms
             dpOPDate.SelectedDate = Convert.ToDateTime(dt1.Rows[0]["vou_date"].ToString());
             cmAcctCode.Text = dt1.Rows[0]["acc_name"].ToString();
             cmAcctCode.SelectedValue = dt1.Rows[0]["acc_code"].ToString();
-            cmOfficeName.Text = dt1.Rows[0]["OfficeName"].ToString();
-            cmOfficeName.SelectedValue = dt1.Rows[0]["OfficeName"].ToString();
         }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -143,11 +137,7 @@ namespace AccountingManagementSystem.Forms
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            if (cmOfficeName.SelectedValue == "")
-            {
-                lblMessage.Text = "Select Cost Center.";
-            }
-            else if (txtAcctCode.Text == "")
+            if (txtAcctCode.Text == "")
             {
                 lblMessage.Text = "Account Code can not be blank.";
             }
@@ -172,7 +162,6 @@ namespace AccountingManagementSystem.Forms
                         cmd.Parameters.Add("@Particular", SqlDbType.NVarChar).Value = txtAcctCode.Text;
                         cmd.Parameters.Add("@dr_amt", SqlDbType.Decimal).Value = txtDebitAmt.Text;
                         cmd.Parameters.Add("@cr_amt", SqlDbType.Decimal).Value = txtCreditAmt.Text;
-                        cmd.Parameters.Add("@OfficeName", SqlDbType.NVarChar).Value = cmOfficeName.Text;
                         cmd.Parameters.Add("@uid", SqlDbType.NVarChar).Value = AppEnv.Current.p_UserName.ToString();
                         cmd.ExecuteNonQuery();
                         con.Close();
@@ -259,32 +248,7 @@ namespace AccountingManagementSystem.Forms
         {
             txtAcctCode.Text = cmAcctCode.SelectedValue;
         }
-        protected void cmOfficeName_ItemsRequested(object sender, RadComboBoxItemsRequestedEventArgs e)
-        {
-            try
-            {
-                con = new SqlConnection(ConfigurationManager.ConnectionStrings["AccountingManagementSystemConnectionString"].ConnectionString);
-                con.Open();
-                cmd = new SqlCommand("select distinct OfficeName from AreaInfo", con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                foreach (DataRow dataRow in dt.Rows)
-                {
-                    RadComboBoxItem item = new RadComboBoxItem();
-                    item.Text = (string)dataRow["OfficeName"];
-                    item.Value = dataRow["OfficeName"].ToString();
-                    cmOfficeName.Items.Add(item);
-                    item.DataBind();
-                }
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                lblMessage.Text = ex.Message;
-            }
-        }
+
         protected void rgMain_NeedDataSource(object sender, GridNeedDataSourceEventArgs e)
         {
             rgMain.DataSource = this.dtOpeningBalance;

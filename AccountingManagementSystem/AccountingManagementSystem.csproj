@@ -115,11 +115,8 @@
     <Content Include="Forms\JournalVoucher.aspx" />
     <Content Include="Forms\OpeningBalance.aspx" />
     <Content Include="Forms\ReportForms\ReportMgrAcc.aspx" />
-    <Content Include="Forms\ReportForms\rptChartOfAccount.aspx" />
-    <Content Include="Forms\ReportForms\rptTransactionEntry.aspx" />
     <Content Include="Forms\Dashboard.aspx" />
     <Content Include="Forms\DBBackup.aspx" />
-    <Content Include="Forms\ReportForms\rptSales.aspx" />
     <Content Include="Images\logo.png" />
     <Content Include="Main.css" />
     <Content Include="pages.css" />
@@ -224,20 +221,6 @@
     <Compile Include="Forms\ReportForms\ReportMgrAcc.aspx.designer.cs">
       <DependentUpon>ReportMgrAcc.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReportForms\rptChartOfAccount.aspx.cs">
-      <DependentUpon>rptChartOfAccount.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\ReportForms\rptChartOfAccount.aspx.designer.cs">
-      <DependentUpon>rptChartOfAccount.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ReportForms\rptTransactionEntry.aspx.cs">
-      <DependentUpon>rptTransactionEntry.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\ReportForms\rptTransactionEntry.aspx.designer.cs">
-      <DependentUpon>rptTransactionEntry.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -251,13 +234,6 @@
     </Compile>
     <Compile Include="Forms\DBBackup.aspx.designer.cs">
       <DependentUpon>DBBackup.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\ReportForms\rptSales.aspx.cs">
-      <DependentUpon>rptSales.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Forms\ReportForms\rptSales.aspx.designer.cs">
-      <DependentUpon>rptSales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
