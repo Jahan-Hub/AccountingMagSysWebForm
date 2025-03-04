@@ -93,3 +93,4 @@ D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.CopyComplete
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.dll
 D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.pdb
+D:\Accounting System Web Form\AccountingManagementSystem\AccountingMagSysWebForm\AccountingManagementSystem\obj\Debug\AccountingManagementSystem.csproj.AssemblyReference.cache

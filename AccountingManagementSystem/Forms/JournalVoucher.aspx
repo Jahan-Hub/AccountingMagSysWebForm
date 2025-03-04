@@ -84,7 +84,7 @@
                         <asp:Label ID="Label8" Style="float: right" runat="server" Text="Date"></asp:Label>
                     </td>
                     <td>
-                        <telerik:RadDatePicker ID="dpVouDate" runat="server" Culture="en-US" TabIndex="2" Width="100px">
+                        <telerik:RadDatePicker ID="dpVouDate" runat="server" Culture="en-US" TabIndex="2" Width="120px">
                             <Calendar UseRowHeadersAsSelectors="False" UseColumnHeadersAsSelectors="False" EnableWeekends="True" FastNavigationNextText="&amp;lt;&amp;lt;"></Calendar>
 
                             <DateInput DisplayDateFormat="dd/MM/yyyy" DateFormat="dd/MM/yyyy" LabelWidth="40%" TabIndex="2">

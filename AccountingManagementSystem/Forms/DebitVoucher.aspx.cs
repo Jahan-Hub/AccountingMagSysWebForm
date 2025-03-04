@@ -799,7 +799,7 @@ namespace AccountingManagementSystem.Forms
             string tempPath = "";
             string reportName = "";
             reportName = "VoucherPrintDebit";
-            AppEnv.Current.p_rptObject = "~/Reports/Accounts/VoucherPrintDebit.rpt";
+            AppEnv.Current.p_rptObject = "~/Reports/VoucherPrintDebit.rpt";
             tempPath = @System.IO.Path.GetTempPath() + "VoucherPrintDebit";
             AppEnv.Current.p_rptSource.Load(Server.MapPath(AccountingManagementSystem.AppEnv.Current.p_rptObject.ToString()));
             AppEnv.Current.p_rptSource.SetDataSource(dt);
@@ -855,7 +855,7 @@ namespace AccountingManagementSystem.Forms
             string tempPath = "";
             string reportName = "";
             reportName = "VoucherPrintDebit";
-            AppEnv.Current.p_rptObject = "~/Reports/Accounts/VoucherPrintDebit.rpt";
+            AppEnv.Current.p_rptObject = "~/Reports/VoucherPrintDebit.rpt";
             tempPath = @System.IO.Path.GetTempPath() + "VoucherPrintDebit";
             AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
             AppEnv.Current.p_rptSource.SetDataSource(dt);

@@ -142,7 +142,7 @@
                                             <ModelErrorMessage Text="" />
                                         </ColumnValidationSettings>
                                     </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="SubGroupText" FilterControlAltText="Filter SubGroupText column" HeaderText="Acct Group" SortExpression="SubGroupText" UniqueName="SubGroupText">
+                                    <telerik:GridBoundColumn DataField="SubGroupText" FilterControlAltText="Filter SubGroupText column" HeaderText="Account Group" SortExpression="SubGroupText" UniqueName="SubGroupText">
                                         <ColumnValidationSettings>
                                             <ModelErrorMessage Text="" />
                                         </ColumnValidationSettings>

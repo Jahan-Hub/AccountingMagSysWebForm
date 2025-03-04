@@ -725,7 +725,7 @@ namespace AccountingManagementSystem.Forms
             string tempPath = "";
             string reportName = "";
             reportName = "VoucherPrint";
-            AppEnv.Current.p_rptObject = "~/Reports/Accounts/VoucherPrintCredit.rpt";
+            AppEnv.Current.p_rptObject = "~/Reports/VoucherPrintCredit.rpt";
             tempPath = @System.IO.Path.GetTempPath() + "VoucherPrint";
             AppEnv.Current.p_rptSource.Load(Server.MapPath(AppEnv.Current.p_rptObject.ToString()));
             AppEnv.Current.p_rptSource.SetDataSource(dt);

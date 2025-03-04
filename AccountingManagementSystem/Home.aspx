@@ -98,9 +98,6 @@
         <div id="divDayName" style="float: left; margin: -89px 750px">
             <asp:Label ID="lblDayName" ForeColor="Crimson" runat="server"></asp:Label>
         </div>
-        <div id="divLogOut" style="float: right; margin: -89px 0px">
-            <asp:HyperLink ID="btnLogin" Font-Underline="false" ForeColor="#0000cc" runat="server" NavigateUrl="~/LogIn.aspx">Log Out</asp:HyperLink>
-        </div>
 
         <div id="container" style="width: 88%">
             <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" Width="100%" Height="100%">

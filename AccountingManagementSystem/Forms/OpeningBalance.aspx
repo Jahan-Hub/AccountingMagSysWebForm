@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OpeningBalance.aspx.cs" Inherits="AccountingManagementSystem.Forms.OpeningBalance" %>
 
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -127,37 +126,37 @@
             </ClientSettings>
             <MasterTableView>
                 <Columns>
-                    <telerik:GridBoundColumn DataField="rowid" Display="False" FilterControlAltText="Filter rowid column" HeaderText="rowid" SortExpression="rowid" UniqueName="rowid">
+                    <telerik:GridBoundColumn DataField="rowid" Display="False" FilterControlAltText="Filter rowid column" HeaderText="S/N" SortExpression="rowid" UniqueName="rowid">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text="" />
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="vou_date" FilterControlAltText="Filter vou_date column" HeaderText="vou_date" SortExpression="vou_date" UniqueName="vou_date" DataFormatString="{0:dd-MM-yyyy}">
+                    <telerik:GridBoundColumn DataField="vou_date" FilterControlAltText="Filter vou_date column" HeaderText="Date" SortExpression="vou_date" UniqueName="vou_date" DataFormatString="{0:dd-MM-yyyy}">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text="" />
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="acc_code" FilterControlAltText="Filter acc_code column" HeaderText="acc_code" SortExpression="acc_code" UniqueName="acc_code">
+                    <telerik:GridBoundColumn DataField="acc_code" FilterControlAltText="Filter acc_code column" HeaderText="Account Code" SortExpression="acc_code" UniqueName="acc_code">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text="" />
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="acc_name" FilterControlAltText="Filter acc_name column" HeaderText="acc_name" SortExpression="acc_name" UniqueName="acc_name">
+                    <telerik:GridBoundColumn DataField="acc_name" FilterControlAltText="Filter acc_name column" HeaderText="Account Name" SortExpression="acc_name" UniqueName="acc_name">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text="" />
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="vou_no" FilterControlAltText="Filter vou_no column" HeaderText="vou_no" SortExpression="vou_no" UniqueName="vou_no" Display="False">
+                    <telerik:GridBoundColumn DataField="vou_no" FilterControlAltText="Filter vou_no column" HeaderText="Voucher No" SortExpression="vou_no" UniqueName="vou_no" Display="False">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text="" />
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="dr_amt" FilterControlAltText="Filter dr_amt column" HeaderText="dr_amt" SortExpression="dr_amt" UniqueName="dr_amt">
+                    <telerik:GridBoundColumn DataField="dr_amt" FilterControlAltText="Filter dr_amt column" HeaderText="Debit Amount" SortExpression="dr_amt" UniqueName="dr_amt">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text="" />
                         </ColumnValidationSettings>
                     </telerik:GridBoundColumn>
-                    <telerik:GridBoundColumn DataField="cr_amt" HeaderText="cr_amt" SortExpression="cr_amt" UniqueName="cr_amt" FilterControlAltText="Filter cr_amt column">
+                    <telerik:GridBoundColumn DataField="cr_amt" HeaderText="Credit Amount" SortExpression="cr_amt" UniqueName="cr_amt" FilterControlAltText="Filter cr_amt column">
                         <ColumnValidationSettings>
                             <ModelErrorMessage Text="" />
                         </ColumnValidationSettings>

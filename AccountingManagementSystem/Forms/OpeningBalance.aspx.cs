@@ -91,7 +91,6 @@ namespace AccountingManagementSystem.Forms
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@status", SqlDbType.VarChar).Value = "3";
             cmd.Parameters.Add("@acc_code", SqlDbType.VarChar).Value = cmAcctCode.SelectedValue;
-            cmd.Parameters.Add("@vou_no", SqlDbType.VarChar).Value = "";
             SqlDataAdapter adpt = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
