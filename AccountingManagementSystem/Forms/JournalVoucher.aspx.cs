@@ -192,7 +192,7 @@ namespace AccountingManagementSystem.Forms
                     con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                     con.Open();
 
-                    cmd = new SqlCommand("Pro_Save_TempVou_Acc", con);
+                    cmd = new SqlCommand("Save_TempVou_Acc", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@vou_no", SqlDbType.NVarChar).Value = txtVoucherNo.Text;
                     cmd.Parameters.Add("@vou_date", SqlDbType.DateTime).Value = dpVouDate.SelectedDate;

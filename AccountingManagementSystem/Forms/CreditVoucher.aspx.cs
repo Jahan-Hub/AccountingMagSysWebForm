@@ -205,7 +205,7 @@ namespace AccountingManagementSystem.Forms
                     con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                     con.Open();
 
-                    cmd = new SqlCommand("Pro_Save_TempVou_Acc", con);
+                    cmd = new SqlCommand("Save_TempVou_Acc", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@vou_no", SqlDbType.NVarChar).Value = txtVoucherNo.Text;
                     cmd.Parameters.Add("@vou_date", SqlDbType.DateTime).Value = dpVouDate.SelectedDate;
@@ -267,7 +267,7 @@ namespace AccountingManagementSystem.Forms
                 this.dtDebitCredit.Rows.Add(newRow);
                 this.dtDebitCredit.AcceptChanges();
 
-                if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0) // for getting credit data
+                if (Convert.ToDecimal(dt1.Rows[i]["dr_amt"].ToString()) > 0) 
                 {
                     cmDebit.SelectedValue = dt1.Rows[i]["acc_code"].ToString();
                     cmDebit.Text = dt1.Rows[i]["acc_nam"].ToString();
@@ -714,7 +714,7 @@ namespace AccountingManagementSystem.Forms
             AppEnv.Current.p_rptSource = new ReportDocument();
             cmd = new SqlCommand("ReportManager_AC", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 6;
+            cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 2;
             cmd.Parameters.Add("@vou_no", SqlDbType.VarChar).Value = txtVoucherNo.Text;
             cmd.Parameters.Add("@vou_type", SqlDbType.VarChar).Value = cmVoucherType.SelectedValue;
 

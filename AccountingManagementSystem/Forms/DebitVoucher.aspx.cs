@@ -260,7 +260,7 @@ namespace AccountingManagementSystem.Forms
                     con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                     con.Open();
 
-                    cmd = new SqlCommand("Pro_Save_TempVou_Acc", con);
+                    cmd = new SqlCommand("Save_TempVou_Acc", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@vou_no", SqlDbType.NVarChar).Value = txtVoucherNo.Text;
                     cmd.Parameters.Add("@vou_date", SqlDbType.DateTime).Value = dpVouDate.SelectedDate;
@@ -787,7 +787,7 @@ namespace AccountingManagementSystem.Forms
             AppEnv.Current.p_rptSource = new ReportDocument();
             cmd = new SqlCommand("ReportManager_AC", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 5;
+            cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 1;
             if (txtVoucherNo.Text != "")
                 cmd.Parameters.Add("@vou_no", SqlDbType.VarChar).Value = txtVoucherNo.Text;
             cmd.Parameters.Add("@vou_type", SqlDbType.VarChar).Value = cmVoucherType.SelectedValue;

@@ -49,7 +49,7 @@ namespace AccountingManagementSystem.Forms
         {
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
-            cmd = new SqlCommand("pro_acct_AC", con);
+            cmd = new SqlCommand("Acct_AC", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "5";
             cmd.Parameters.Add("@acc_head", SqlDbType.VarChar).Value = cmMainLedger.SelectedValue;
@@ -107,7 +107,7 @@ namespace AccountingManagementSystem.Forms
             con.Open();
             try
             {
-                cmd = new SqlCommand("pro_acct_AC", con);
+                cmd = new SqlCommand("Acct_AC", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "1";
                 cmd.Parameters.Add("@acc_code", SqlDbType.NVarChar).Value = txtAccountHeadCode.Text;
@@ -185,7 +185,7 @@ namespace AccountingManagementSystem.Forms
             GridDataItem selectedItem = (GridDataItem)rgMain.SelectedItems[0];
             con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
             con.Open();
-            cmd = new SqlCommand("pro_acct_AC", con);
+            cmd = new SqlCommand("Acct_AC", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "6";
             cmd.Parameters.Add("@acc_code", SqlDbType.VarChar).Value = selectedItem["acc_code"].Text;
@@ -256,33 +256,6 @@ namespace AccountingManagementSystem.Forms
         protected void rgMain_NeedDataSource(object sender, GridNeedDataSourceEventArgs e)
         {
             rgMain.DataSource = this.dtChartOfAccount;
-        }
-
-        protected void txtAccountHeadCode_TextChanged(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    cmd = new SqlCommand("pro_acct_AC", con);
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.Parameters.Add("@mode", SqlDbType.VarChar).Value = "6";
-            //    cmd.Parameters.Add("@Offerid", SqlDbType.VarChar).Value = txtAccountHeadCode.Text;
-            //    SqlDataReader Dr = cmd.ExecuteReader();
-            //    while (Dr.Read())
-            //    {
-            //        //txtAccountHeadCode.Text = dt1.Rows[0]["Acc_Code"].ToString();
-            //        //txtAccountsHead.Text = dt1.Rows[0]["Acc_Name"].ToString();
-            //        //txtBudget.Text = dt1.Rows[0]["Acc_Budg"].ToString();
-            //        //txtDepRate.Text = dt1.Rows[0]["Pl_Rate"].ToString();
-            //        //cmAccType.SelectedValue = dt1.Rows[0]["Acc_Status"].ToString();
-            //    }
-            //    con.Close();
-            //    Dr.Dispose();
-            //    cmd.Dispose();
-            //}
-            //catch (Exception ex)
-            //{
-            //    lblMessage.Text = ex.Message;
-            //}
         }
     }
 }

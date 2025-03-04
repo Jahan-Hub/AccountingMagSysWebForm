@@ -81,7 +81,7 @@
                         <asp:Label ID="Label3" runat="server" Text="Accounts Head"></asp:Label>
                     </td>
                     <td class="auto-style2" colspan="3">
-                        <telerik:RadTextBox ID="txtAccountHeadCode" runat="server" Width="100px" OnTextChanged="txtAccountHeadCode_TextChanged">
+                        <telerik:RadTextBox ID="txtAccountHeadCode" runat="server" Width="100px">
                         </telerik:RadTextBox>
                         <telerik:RadTextBox ID="txtAccountsHead" runat="server" Width="300px">
                         </telerik:RadTextBox>

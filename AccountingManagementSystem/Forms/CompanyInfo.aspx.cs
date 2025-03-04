@@ -70,7 +70,7 @@ namespace AccountingManagementSystem.Forms
             con.Open();
             try
             {
-                cmd = new SqlCommand("Sp_CompanyInfo", con);
+                cmd = new SqlCommand("CompanyInfo", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@mode", SqlDbType.Int).Value = 2;
                 cmd.Parameters.Add("@Name", SqlDbType.NVarChar).Value = txtName.Text;
